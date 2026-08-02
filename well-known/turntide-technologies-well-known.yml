@@ -1,0 +1,65 @@
+generated: '2026-08-02'
+method: searched
+source: live probes of every host in apis.yml and every OpenAPI servers[] host
+hosts_probed:
+- turntide.com
+- app.turntide.com
+documents:
+- host: turntide.com
+  path: /.well-known/oauth-authorization-server
+  spec: RFC 8414 OAuth 2.0 Authorization Server Metadata
+  status: 200
+  note: served after a 301 to the trailing-slash form; issuer https://turntide.com, PKCE
+    S256 required, single scope "mcp", token_endpoint_auth_methods_supported ["none"]
+    (public clients), client_id_metadata_document_supported true
+  file: turntide-technologies-oauth-authorization-server.json
+- host: turntide.com
+  path: /.well-known/oauth-protected-resource
+  spec: RFC 9728 OAuth 2.0 Protected Resource Metadata
+  status: 200
+  note: declares the protected resource as https://turntide.com/wp-json/mcp/mcp-oauth-server
+    (the WordPress MCP adapter endpoint), bearer token in the Authorization header
+  file: turntide-technologies-oauth-protected-resource.json
+- host: turntide.com
+  path: /.well-known/security.txt
+  spec: RFC 9116
+  status: 404
+- host: turntide.com
+  path: /.well-known/openid-configuration
+  status: 404
+- host: turntide.com
+  path: /.well-known/api-catalog
+  spec: RFC 9727
+  status: 404
+- host: turntide.com
+  path: /.well-known/ai-plugin.json
+  status: 404
+- host: turntide.com
+  path: /.well-known/agent-card.json
+  spec: A2A 1.0.0
+  status: 404
+- host: turntide.com
+  path: /.well-known/agent.json
+  spec: A2A pre-0.3 legacy
+  status: 404
+- host: app.turntide.com
+  path: /.well-known/security.txt
+  status: 404
+- host: app.turntide.com
+  path: /.well-known/openid-configuration
+  status: 404
+- host: app.turntide.com
+  path: /.well-known/oauth-authorization-server
+  status: 404
+- host: app.turntide.com
+  path: /.well-known/agent-card.json
+  status: 404
+- host: app.turntide.com
+  path: /.well-known/agent.json
+  status: 404
+x-evidence:
+  fetched: '2026-08-02'
+  notes: >-
+    app.turntide.com returns a single-page-app shell for most paths but answers 404 for
+    /.well-known/* , so no false-positive agent-card was recorded. No A2A agent card was
+    found on any Turntide host; per the enrichment contract no a2a/ artifact was authored.

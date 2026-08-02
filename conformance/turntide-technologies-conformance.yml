@@ -1,0 +1,75 @@
+generated: '2026-08-02'
+method: searched
+source: live probes of turntide.com + openapi/turntide-technologies-wordpress-rest-openapi.yml
+standards:
+- id: oauth2
+  conforms: true
+  evidence: 'OpenAPI securityScheme type oauth2 (authorizationCode); live RFC 8414 metadata at
+    https://turntide.com/.well-known/oauth-authorization-server'
+- id: rfc8414-oauth-authorization-server-metadata
+  conforms: true
+  evidence: 'https://turntide.com/.well-known/oauth-authorization-server returns 200 with
+    issuer, authorization_endpoint, token_endpoint, revocation_endpoint,
+    code_challenge_methods_supported [S256]'
+- id: rfc9728-oauth-protected-resource-metadata
+  conforms: true
+  evidence: 'https://turntide.com/.well-known/oauth-protected-resource returns 200 declaring
+    resource https://turntide.com/wp-json/mcp/mcp-oauth-server'
+- id: rfc7636-pkce
+  conforms: true
+  evidence: code_challenge_methods_supported ["S256"] in the authorization server metadata
+- id: mcp
+  conforms: true
+  evidence: 'JSON-RPC 2.0 MCP endpoint at https://turntide.com/wp-json/mcp/mcp-oauth-server
+    returning a structured mcp_unauthorized 401; WordPress MCP Adapter implementation'
+- id: rfc8288-web-linking
+  conforms: true
+  evidence: 'Link header with rel="next" observed on wp/v2 collection responses'
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404 on turntide.com and app.turntide.com
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: errors use a proprietary {code, message, data} JSON envelope, not application/problem+json
+- id: openid-connect
+  conforms: false
+  evidence: /.well-known/openid-configuration returns 404
+- id: rfc9727-api-catalog
+  conforms: false
+  evidence: /.well-known/api-catalog returns 404
+- id: a2a
+  conforms: false
+  evidence: /.well-known/agent-card.json and /.well-known/agent.json return 404 on every host
+- id: asyncapi
+  conforms: false
+  evidence: no event, streaming or webhook surface published
+- id: json-api
+  conforms: false
+  evidence: responses are plain JSON objects/arrays, not the JSON:API media type
+- id: odata
+  conforms: false
+- id: scim2
+  conforms: false
+- id: fhir-r4
+  conforms: false
+compliance_program:
+  published: true
+  url: https://turntide.com/
+  section: 'Certifications — "Certified to lead. Trusted to deliver."'
+  certifications:
+  - {name: ISO 9001, domain: quality management systems, certifier: BSI, accreditation: UKAS}
+  - {name: ISO 14001, domain: environmental management, certifier: BSI, accreditation: UKAS}
+  - {name: ISO 45001, domain: occupational health and safety management, certifier: BSI,
+     accreditation: UKAS}
+  product_certifications: https://turntide.com/documents/datasheet/turntide-smart-motor-system-product-certifications/
+  note: >-
+    These are manufacturing management-system and product certifications, appropriate to a
+    hardware manufacturer. Turntide publishes NO information-security certifications — no
+    SOC 2, no ISO 27001, no PCI DSS, no HIPAA, no FedRAMP — and no trust center was found
+    (trust.turntide.com and security.turntide.com do not resolve).
+privacy:
+  gdpr_notices:
+  - https://turntide.com/privacy-statement-eu/
+  - https://turntide.com/privacy-statement-uk/
+  - https://turntide.com/privacy-statement-us/
+  consent_management: Complianz (complianz/v1 REST namespace present in the route index)

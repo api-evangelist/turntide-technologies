@@ -1,0 +1,121 @@
+generated: '2026-08-02'
+method: derived
+source: openapi/turntide-technologies-wordpress-rest-openapi.yml + live probes of
+  https://turntide.com/wp-json/wp/v2/posts
+api: Turntide WordPress REST API
+scope: >-
+  Cross-cutting request/response semantics observed on the WordPress REST API published at
+  turntide.com/wp-json. Everything below was either read out of the live route index or
+  observed on a live request/response against this host on 2026-08-02.
+authentication:
+  anonymous_read: true
+  note: >-
+    Public content collections (wp/v2 posts, pages, media, categories, tags, comments) read
+    anonymously. Write operations and the wp-abilities/v1 + mcp namespaces return
+    401 rest_forbidden / mcp_unauthorized without credentials.
+  schemes:
+  - Application Passwords (HTTP Basic) — advertised in the route index at
+    authentication.application-passwords; authorize at
+    https://turntide.com/wp-admin/authorize-application.php
+  - OAuth 2.1 authorization code + PKCE (S256), scope "mcp" — for the MCP endpoint only
+  cross_reference: authentication/turntide-technologies-authentication.yml
+idempotency:
+  supported: false
+  note: >-
+    No idempotency key header or parameter is documented or present in the route index. Writes
+    are plain REST semantics (POST creates, PUT/PATCH update, DELETE removes). No Idempotency
+    pointer is emitted for this provider.
+pagination:
+  style: page-number
+  request_params:
+  - name: page
+    default: 1
+  - name: per_page
+    default: 10
+    max: 100
+    note: values above 100 return 400 rest_invalid_param / rest_out_of_bounds
+  - name: offset
+  - name: order
+    enum: [asc, desc]
+  - name: orderby
+  response_headers:
+  - X-WP-Total
+  - X-WP-TotalPages
+  link_header: 'RFC 8288 Link header with rel="next" / rel="prev", e.g.
+    <https://turntide.com/wp-json/wp/v2/posts?per_page=2&page=2>; rel="next"'
+  observed:
+    url: https://turntide.com/wp-json/wp/v2/posts?per_page=2&page=1
+    x_wp_total: 139
+    x_wp_totalpages: 70
+sparse_fieldsets:
+  supported: true
+  param: _fields
+  note: 'comma-separated property list, e.g. ?_fields=id,slug,link — verified live'
+expansion:
+  supported: true
+  param: _embed
+  note: >-
+    HAL-style _links on every resource (self, collection, about, author, replies,
+    wp:featuredmedia, wp:term, curies); ?_embed=1 inlines the linked resources under _embedded.
+    Link targets carry targetHints.allow listing the methods available to the caller.
+context_shaping:
+  param: context
+  enum: [view, embed, edit]
+  note: controls which schema properties are returned; edit requires authentication
+metadata:
+  supported: true
+  field: meta
+  note: 'wp/v2 content types expose a `meta` object; this site additionally exposes an `acf`
+    object (Advanced Custom Fields) on posts and pages'
+request_tracing:
+  request_id_header: null
+  note: no request-id or correlation-id header observed in responses
+versioning:
+  scheme: uri-path namespace
+  current: wp/v2
+  namespaces:
+  - wp/v2
+  - wp-abilities/v1
+  - wp-site-health/v1
+  - wp-block-editor/v1
+  - mcp
+  - oembed/1.0
+  - coauthors/v1
+  - redirection/v1
+  - yoast/v1
+  - complianz/v1
+  - wpforms/v1
+  - wpe/cache-plugin/v1
+  - wpe_sign_on_plugin/v1
+  - themeco
+  cross_reference: lifecycle/turntide-technologies-lifecycle.yml
+error_envelope:
+  format: proprietary JSON (not RFC 9457 application/problem+json)
+  content_type: application/json
+  shape:
+    code: machine-readable string, e.g. rest_post_invalid_id
+    message: human-readable string
+    data.status: HTTP status code repeated in the body
+    data.params: per-parameter validation messages (validation errors only)
+    data.details: per-parameter nested error objects (validation errors only)
+  cross_reference: errors/turntide-technologies-problem-types.yml
+rate_limiting:
+  signaled: false
+  note: >-
+    No X-RateLimit-* or Retry-After headers observed. The host sits behind Cloudflare and WP
+    Engine caching (x-cacheable, x-cache, x-cache-group headers observed) so throttling, if
+    any, is edge-enforced and unsignaled.
+caching:
+  cache_control: 'max-age=600, must-revalidate (observed on wp/v2 collections)'
+  headers_observed: [x-cacheable, x-cache, x-cache-group]
+cors:
+  access_control_allow_headers: [Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type]
+  access_control_expose_headers: [X-WP-Total, X-WP-TotalPages, Link]
+method_override:
+  supported: true
+  header: X-HTTP-Method-Override
+  note: standard WordPress REST behaviour for clients that cannot send PUT/PATCH/DELETE
+batching:
+  endpoint: /batch/v1
+  operationId: createBatchV1
+  note: WordPress core batch endpoint present in the route index

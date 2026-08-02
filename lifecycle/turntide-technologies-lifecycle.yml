@@ -1,0 +1,55 @@
+generated: '2026-08-02'
+method: derived
+source: openapi/turntide-technologies-wordpress-rest-openapi.yml + searches of turntide.com
+versioning:
+  scheme: uri-path namespace
+  current: wp/v2
+  docs: null
+  note: >-
+    Namespace versioning is inherited from WordPress core and its plugins, not from a Turntide
+    versioning policy. Turntide publishes no API versioning policy of its own.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  deprecation_header: false
+  note: No Sunset or Deprecation response headers (RFC 8594) were observed, and no deprecation
+    policy is published.
+deprecated_operations: []
+sla:
+  url: null
+  uptime_target: null
+status_page:
+  url: null
+  probed:
+  - url: https://status.turntide.com/
+    result: NXDOMAIN
+  note: No status page was found on any Turntide host or subdomain.
+support:
+  help_center: https://support.turntide.com/hc/en-us
+  contact: https://turntide.com/contact-us/
+  hvac_support_phone: '+1-877-776-8470'
+changelog:
+  url: null
+  note: >-
+    Turntide publishes news and press at https://turntide.com/press/ and
+    https://turntide.com/current-and-wave/ but no dated API or product changelog, so no
+    changelog/ artifact was authored.
+corporate_lifecycle:
+  founded: 2013
+  founded_as: Software Motor Corporation
+  renamed: 2020
+  acquisitions:
+  - {company: VES, year: 2020, domain: dairy technology}
+  - {company: Artex Barn Solutions, year: 2020, domain: agricultural technology}
+  - {company: Riptide, year: 2021, domain: cloud building automation}
+  - {company: Hyperdrive Innovation, year: 2021, domain: battery systems}
+  - {company: AVID Technology, year: 2021, domain: EV controls and e-machines}
+  - {company: BorgWarner Gateshead drivetrain division, year: 2021, domain: drivetrain}
+  divestitures:
+  - {business: building automation division, acquirer: BrainBox AI,
+     evidence: 'app.turntide.com now serves an application branded OEM: brainboxai (observed
+       2026-08-02), and trade press reported BrainBox AI acquiring the Turntide automation
+       business'}
+  note: >-
+    Recorded because it explains why the legacy building-automation app on app.turntide.com is
+    no longer a Turntide-operated product surface. Corporate facts, not API lifecycle facts.

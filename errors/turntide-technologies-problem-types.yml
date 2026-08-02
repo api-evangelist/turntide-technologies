@@ -1,0 +1,61 @@
+generated: '2026-08-02'
+method: derived
+source: openapi/turntide-technologies-wordpress-rest-openapi.yml + live error responses observed
+  against https://turntide.com/wp-json on 2026-08-02
+format: proprietary
+format_note: >-
+  Not RFC 9457. The WordPress REST API returns application/json with a {code, message, data}
+  envelope rather than application/problem+json with type/title/detail. No operation in the
+  derived spec declares application/problem+json.
+envelope:
+  content_type: application/json
+  fields:
+    code: machine-readable error slug
+    message: human-readable message
+    data.status: HTTP status code
+    data.params: map of parameter name to validation message (validation errors only)
+    data.details: map of parameter name to a nested {code, message, data} object (validation
+      errors only)
+  additional_errors: >-
+    When more than one error occurred, WordPress returns data.additional_errors[] carrying the
+    same envelope shape per error.
+problems:
+- code: rest_no_route
+  status: 404
+  title: No route was found matching the URL and request method
+  observed_at: POST https://turntide.com/wp-json/mcp/v1/mcp
+  observed_body: '{"code":"rest_no_route","message":"No route was found matching the URL and
+    request method.","data":{"status":404}}'
+  remediation: Check the path and HTTP method against the route index at https://turntide.com/wp-json/
+- code: rest_post_invalid_id
+  status: 404
+  title: Invalid post ID
+  observed_at: GET https://turntide.com/wp-json/wp/v2/posts/99999999
+  observed_body: '{"code":"rest_post_invalid_id","message":"Invalid post ID.","data":{"status":404}}'
+  remediation: List the collection first and use an id returned by it.
+- code: rest_invalid_param
+  status: 400
+  title: Invalid parameter(s)
+  observed_at: GET https://turntide.com/wp-json/wp/v2/posts?per_page=999
+  observed_body: '{"code":"rest_invalid_param","message":"Invalid parameter(s): per_page","data":{"status":400,"params":{"per_page":"per_page
+    must be between 1 (inclusive) and 100 (inclusive)"}}}'
+  nested_code: rest_out_of_bounds
+  remediation: Read data.params for the per-parameter message; per_page is capped at 100.
+- code: rest_forbidden
+  status: 401
+  title: Sorry, you are not allowed to do that
+  observed_at: GET https://turntide.com/wp-json/wp-abilities/v1/abilities
+  observed_body: '{"code":"rest_forbidden","message":"Sorry, you are not allowed to do that.","data":{"status":401}}'
+  remediation: Authenticate with an Application Password (HTTP Basic) or a session with
+    sufficient capability. Note WordPress returns 401 with the code named "forbidden".
+- code: mcp_unauthorized
+  status: 401
+  title: MCP authentication required
+  observed_at: POST https://turntide.com/wp-json/mcp/mcp-oauth-server (JSON-RPC tools/list)
+  observed_body: '{"code":"mcp_unauthorized","message":"MCP authentication required.","data":{"status":401}}'
+  remediation: Obtain an OAuth 2.1 bearer token with scope "mcp" from
+    https://turntide.com/oauth/token using authorization code + PKCE (S256).
+x-notes: >-
+  Only codes actually observed on live responses against this host are listed. The WordPress
+  REST API defines many more error slugs; none are asserted here because they were not observed
+  and Turntide publishes no error reference.

@@ -1,0 +1,117 @@
+generated: '2026-08-02'
+method: derived
+source: openapi/turntide-technologies-wordpress-rest-openapi.yml (components.schemas harvested
+  live via HTTP OPTIONS on the wp/v2 collections)
+api: Turntide WordPress REST API
+note: >-
+  Entities and relationships below are derived only from schema properties that actually exist
+  in the harvested JSON Schemas. Relationship targets follow the WordPress core id-reference
+  contract (an integer id field naming another collection); no relationship is asserted for a
+  field that is not present in the harvested schema.
+identifiers:
+  scheme: integer surrogate ids, unique per collection
+  secondary: slug (URL-safe string, unique per collection)
+  note: no prefixed/typed identifiers (no obj_ style prefixes)
+entities:
+- name: Post
+  collection: /wp/v2/posts
+  operations: [getWpV2Posts, createWpV2Posts, getWpV2PostsById, updateWpV2PostsById,
+    deleteWpV2PostsById]
+  properties: 29
+  key_fields: [id, slug, status, type, title, content, excerpt, author, featured_media,
+    categories, tags, coauthors, meta, acf]
+- name: Page
+  collection: /wp/v2/pages
+  properties: 27
+  key_fields: [id, slug, parent, menu_order, title, content, author, featured_media]
+- name: Attachment
+  collection: /wp/v2/media
+  properties: 30
+  key_fields: [id, media_type, mime_type, media_details, source_url, post, alt_text, caption]
+- name: Category
+  collection: /wp/v2/categories
+  taxonomy: category
+  properties: 10
+  key_fields: [id, name, slug, parent, count, taxonomy]
+- name: Tag
+  collection: /wp/v2/tags
+  taxonomy: post_tag
+  properties: 8
+  key_fields: [id, name, slug, count, taxonomy]
+- name: User
+  collection: /wp/v2/users
+  properties: 20
+  key_fields: [id, slug, name, roles, capabilities, avatar_urls]
+- name: Comment
+  collection: /wp/v2/comments
+  properties: 18
+  key_fields: [id, post, parent, author, author_name, content, status]
+- name: Taxonomy
+  collection: /wp/v2/taxonomies
+  properties: 11
+  key_fields: [slug, name, types, hierarchical, rest_base, rest_namespace]
+- name: Type
+  collection: /wp/v2/types
+  properties: 16
+  key_fields: [slug, name, taxonomies, supports, rest_base, rest_namespace]
+- name: Status
+  collection: /wp/v2/statuses
+  properties: 8
+  key_fields: [slug, name, public, private, protected]
+- name: SearchResult
+  collection: /wp/v2/search
+  properties: 5
+  key_fields: [id, title, url, type, subtype]
+- name: NavMenuItem
+  collection: /wp/v2/menu-items
+  properties: 19
+  key_fields: [id, parent, menus, object, object_id, url, menu_order]
+- name: WpNavigation
+  collection: /wp/v2/navigation
+  properties: 15
+- name: WpBlock
+  collection: /wp/v2/blocks
+  properties: 18
+  key_fields: [id, title, content, wp_pattern_category]
+- name: WpTemplate
+  collection: /wp/v2/templates
+  properties: 19
+  key_fields: [id, slug, theme, source, origin, author]
+relationships:
+- {from: Post, to: User, kind: belongs_to, via: author}
+- {from: Post, to: Attachment, kind: belongs_to, via: featured_media}
+- {from: Post, to: Category, kind: has_many, via: categories}
+- {from: Post, to: Tag, kind: has_many, via: tags}
+- {from: Post, to: User, kind: has_many, via: coauthors,
+   note: Co-Authors Plus plugin field; also exposed at coauthors/v1}
+- {from: Post, to: Comment, kind: has_many, via: comment_status,
+   note: 'inverse of Comment.post; gated by comment_status open/closed'}
+- {from: Page, to: Page, kind: belongs_to, via: parent}
+- {from: Page, to: User, kind: belongs_to, via: author}
+- {from: Page, to: Attachment, kind: belongs_to, via: featured_media}
+- {from: Attachment, to: Post, kind: belongs_to, via: post}
+- {from: Attachment, to: User, kind: belongs_to, via: author}
+- {from: Category, to: Category, kind: belongs_to, via: parent}
+- {from: Comment, to: Post, kind: belongs_to, via: post}
+- {from: Comment, to: Comment, kind: belongs_to, via: parent}
+- {from: Comment, to: User, kind: belongs_to, via: author}
+- {from: Taxonomy, to: Type, kind: has_many, via: types}
+- {from: Type, to: Taxonomy, kind: has_many, via: taxonomies}
+- {from: NavMenuItem, to: NavMenuItem, kind: belongs_to, via: parent}
+- {from: NavMenuItem, to: Post, kind: belongs_to, via: object_id,
+   note: polymorphic — object names the target post type or taxonomy}
+- {from: WpTemplate, to: User, kind: belongs_to, via: author}
+traversal:
+  hal_links: >-
+    Every resource carries a _links object (self, collection, about, author, replies,
+    wp:featuredmedia, wp:term, wp:attachment, curies) with targetHints.allow. Adding ?_embed=1
+    inlines the linked resources under _embedded, which is the practical way to walk the graph
+    in one request.
+custom_fields:
+  acf:
+    present_on: [Post, Page, Attachment, Category, Comment, User, NavMenuItem, WpNavigation,
+      WpBlock, WpTemplate]
+    note: >-
+      Advanced Custom Fields object. Its inner shape is site-specific and is not declared in the
+      harvested schemas, so no ACF sub-fields are documented here.
+render: null

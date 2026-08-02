@@ -1,0 +1,43 @@
+generated: '2026-08-02'
+method: searched
+source: openapi/turntide-technologies-wordpress-rest-openapi.yml
+docs: https://turntide.com/.well-known/oauth-authorization-server
+x-evidence:
+  fetched: '2026-08-02'
+  application_passwords: >-
+    advertised at https://turntide.com/wp-json/ under authentication.application-passwords
+    (HTTP 200); authorize endpoint https://turntide.com/wp-admin/authorize-application.php
+  oauth2: >-
+    RFC 8414 metadata at https://turntide.com/.well-known/oauth-authorization-server (HTTP 200):
+    authorization code + refresh_token grants, PKCE S256 required, public clients
+    (token_endpoint_auth_methods_supported ["none"]), client_id_metadata_document_supported true,
+    revocation endpoint https://turntide.com/oauth/revoke
+  observed_401s:
+  - {url: 'https://turntide.com/wp-json/wp-abilities/v1/abilities', code: rest_forbidden, status: 401}
+  - {url: 'https://turntide.com/wp-json/mcp/mcp-oauth-server', code: mcp_unauthorized, status: 401}
+  anonymous_read: 'wp/v2 published content collections read without credentials (HTTP 200)'
+summary:
+  types:
+  - http
+  - oauth2
+  oauth2_flows:
+  - authorizationCode
+schemes:
+- name: applicationPassword
+  type: http
+  scheme: basic
+  description: WordPress Application Passwords, advertised by the route index at https://turntide.com/wp-json/
+    under authentication.application-passwords; authorization endpoint https://turntide.com/wp-admin/authorize-application.php
+  sources:
+  - openapi/turntide-technologies-wordpress-rest-openapi.yml
+- name: mcpOAuth2
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://turntide.com/oauth/authorize
+    tokenUrl: https://turntide.com/oauth/token
+    scopes: 1
+  description: OAuth 2.1 authorization server advertised at https://turntide.com/.well-known/oauth-authorization-server
+    (PKCE S256, scope 'mcp'); protects the MCP endpoint declared at https://turntide.com/.well-known/oauth-protected-resource
+  sources:
+  - openapi/turntide-technologies-wordpress-rest-openapi.yml

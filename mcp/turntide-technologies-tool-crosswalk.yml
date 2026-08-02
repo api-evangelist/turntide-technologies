@@ -1,0 +1,74 @@
+generated: '2026-08-02'
+method: derived
+source: mcp/turntide-technologies-mcp.yml + openapi/turntide-technologies-wordpress-rest-openapi.yml
+summary: >-
+  Turntide runs both an MCP server and a REST surface on the same host (turntide.com), so this
+  crosswalk is emitted per the enrichment contract. The MCP tool list is auth-gated (anonymous
+  tools/list returns 401 mcp_unauthorized) and Turntide publishes no llms.txt or MCP docs listing
+  the tools, so NO individual tools are named here — naming them would be fabrication. What can
+  be bound honestly is the SURFACE-level relationship: the WordPress MCP Adapter projects the
+  site's registered WordPress Abilities as MCP tools, and the same Abilities registry is exposed
+  over REST at wp-abilities/v1, whose operations are enumerated in the derived OpenAPI.
+surfaces:
+  openapi:
+    file: openapi/turntide-technologies-wordpress-rest-openapi.yml
+    operations: 485
+    gated: false
+    note: derived from the anonymous route index at https://turntide.com/wp-json/
+  mcp:
+    url: https://turntide.com/wp-json/mcp/mcp-oauth-server
+    gated: true
+    gate: OAuth 2.1 bearer, scope "mcp" (401 mcp_unauthorized anonymously)
+  graphql:
+    present: false
+crosswalk:
+- tool: '<gated — tool names not observable anonymously>'
+  category: wordpress-abilities
+  rest:
+  - getWpAbilitiesV1Abilities
+  - getWpAbilitiesV1AbilitiesByName
+  - createWpAbilitiesV1AbilitiesByNameRun
+  binding: rest
+  confidence: low
+  note: >-
+    Surface-level binding only. The WordPress MCP Adapter exposes registered Abilities as MCP
+    tools; wp-abilities/v1 is the REST projection of that same registry (list abilities, read one
+    ability's schema, run one ability). Both the MCP tools/list and the wp-abilities/v1 routes
+    return 401 anonymously, so neither the tool names nor the ability names could be observed.
+    No per-tool mapping is asserted.
+mcp_only: []
+mcp_only_note: >-
+  Cannot be determined without an authenticated tools/list. Left empty rather than guessed.
+rest_only:
+- capability: WordPress content collections (wp/v2)
+  operations: 279
+  note: posts, pages, media, categories, tags, users, comments, taxonomies, types, statuses,
+    search, menus, blocks, templates, global styles, font families, revisions
+- capability: Redirection plugin management (redirection/v1)
+  operations: 73
+- capability: Yoast SEO (yoast/v1)
+  operations: 61
+- capability: Complianz consent management (complianz/v1)
+  operations: 12
+- capability: Site health (wp-site-health/v1)
+  operations: 8
+- capability: WPForms (wpforms/v1)
+  operations: 8
+- capability: Co-Authors Plus (coauthors/v1)
+  operations: 7
+- capability: MCP transport endpoints themselves (mcp)
+  operations: 7
+  note: getMcp, createMcpMcpOauthServer, createMcpMcpAdapterDefaultServer and their GET/DELETE
+    session counterparts — these are the JSON-RPC transport, not tools
+- capability: Theme (themeco), block editor, WP Engine plugins, oEmbed
+  operations: 20
+coverage:
+  tools_named: 0
+  tools_bound: 0
+  mcp_only: null
+  rest_operations_total: 485
+  rest_operations_with_tool: 0
+  note: >-
+    Zero named tools is an honest observation, not a gap in the pass — the live schema requires
+    an authenticated OAuth introspection with the "mcp" scope, which this pipeline does not
+    perform against third-party hosts.

@@ -1,0 +1,63 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for the Turntide WordPress REST API
+  version: 1.0.0
+extends: openapi/turntide-technologies-wordpress-rest-openapi.yml
+x-generated: '2026-08-02'
+x-method: generated
+x-source: API Evangelist enrichment pipeline (local-v1)
+actions:
+- target: $.info
+  update:
+    x-apievangelist-provider: turntide-technologies
+    x-apievangelist-surface-class: cms
+    x-apievangelist-note: >-
+      This contract describes the corporate website's WordPress REST surface, not a product API.
+      Turntide Technologies publishes no developer API for its motors, power electronics, energy
+      storage or thermal products.
+    x-apievangelist-derivation: >-
+      Derived mechanically from the anonymous route index at https://turntide.com/wp-json/ on
+      2026-08-02; component schemas harvested via HTTP OPTIONS on the wp/v2 collections.
+- target: $.info
+  update:
+    x-agent-surfaces:
+      mcp: https://turntide.com/wp-json/mcp/mcp-oauth-server
+      mcp_gated: true
+      oauth_authorization_server: https://turntide.com/.well-known/oauth-authorization-server
+      oauth_protected_resource: https://turntide.com/.well-known/oauth-protected-resource
+      a2a_agent_card: null
+- target: $.info
+  update:
+    x-conventions:
+      pagination: page-number (page, per_page max 100) with X-WP-Total, X-WP-TotalPages and an
+        RFC 8288 Link header
+      sparse_fieldsets: _fields
+      expansion: _embed with HAL _links
+      idempotency: not supported
+      rate_limit_signaling: none observed
+      error_envelope: proprietary {code, message, data} JSON — not RFC 9457
+      artifact: conventions/turntide-technologies-conventions.yml
+- target: $.components.schemas.RestError
+  update:
+    x-apievangelist-observed:
+    - rest_no_route (404)
+    - rest_post_invalid_id (404)
+    - rest_invalid_param (400)
+    - rest_forbidden (401)
+    - mcp_unauthorized (401)
+    x-apievangelist-catalog: errors/turntide-technologies-problem-types.yml
+- target: $.components.securitySchemes.mcpOAuth2
+  update:
+    x-apievangelist-evidence:
+      source: https://turntide.com/.well-known/oauth-authorization-server
+      http_status: 200
+      fetched: '2026-08-02'
+      pkce: S256
+      token_endpoint_auth_methods_supported:
+      - none
+- target: $.components.securitySchemes.applicationPassword
+  update:
+    x-apievangelist-evidence:
+      source: https://turntide.com/wp-json/
+      field: authentication.application-passwords
+      fetched: '2026-08-02'

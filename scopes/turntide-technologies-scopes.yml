@@ -1,0 +1,33 @@
+generated: '2026-08-02'
+method: searched
+source: https://turntide.com/.well-known/oauth-authorization-server
+docs: https://turntide.com/.well-known/oauth-protected-resource
+scope_note: >-
+  The single scope "mcp" is not inferred — it is published verbatim as scopes_supported in the
+  live RFC 8414 authorization server metadata and repeated in the RFC 9728 protected resource
+  metadata. Turntide publishes no human-readable scope reference page; there is no broader
+  permission model, because the only OAuth-protected resource is the MCP endpoint.
+x-evidence:
+  fetched: '2026-08-02'
+  urls:
+  - {url: 'https://turntide.com/.well-known/oauth-authorization-server', http_status: 200}
+  - {url: 'https://turntide.com/.well-known/oauth-protected-resource', http_status: 200}
+  files:
+  - well-known/turntide-technologies-oauth-authorization-server.json
+  - well-known/turntide-technologies-oauth-protected-resource.json
+schemes:
+- name: mcpOAuth2
+  source: openapi/turntide-technologies-wordpress-rest-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://turntide.com/oauth/authorize
+    tokenUrl: https://turntide.com/oauth/token
+  description: OAuth 2.1 authorization server advertised at https://turntide.com/.well-known/oauth-authorization-server
+    (PKCE S256, scope 'mcp'); protects the MCP endpoint declared at https://turntide.com/.well-known/oauth-protected-resource
+scopes:
+- scope: mcp
+  description: Access the Turntide MCP server
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/turntide-technologies-wordpress-rest-openapi.yml
