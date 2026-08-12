@@ -32,32 +32,168 @@ tags:
 - Building Automation
 - Content Management
 apis:
-- name: Turntide WordPress REST API
-  description: 'The WordPress REST API surface published by Turntide Technologies at
-    turntide.com/wp-json — 274 routes across 14 namespaces including wp/v2 content collections
-    (posts, pages, media, categories, tags, users, comments), the WordPress Abilities API
-    (wp-abilities/v1) and an MCP adapter namespace (mcp). This is the corporate website''s
-    content/CMS surface, not a product API for Turntide''s motor, power electronics, energy
-    storage or thermal hardware — Turntide ships no public developer API for those products.
-    The OpenAPI in this repo was derived mechanically from the live route index and from
-    JSON Schemas returned by HTTP OPTIONS on the core wp/v2 collections.'
+- aid: turntide-technologies:turntide-technologies-coauthors-v1-api
+  name: Turntide Technologies Coauthors/v1 API
+  description: The coauthors/v1 API from Turntide Technologies — 6 operation(s) for coauthors/v1.
   humanURL: https://turntide.com/wp-json/
   baseURL: https://turntide.com/wp-json
   tags:
-  - Content Management
-  - WordPress
-  - REST
+  - coauthors/v1
   properties:
   - type: OpenAPI
-    url: openapi/turntide-technologies-wordpress-rest-openapi.yml
-  - type: Overlay
-    url: overlays/turntide-technologies-wordpress-rest-overlay.yaml
+    url: openapi/turntide-technologies-coauthors-v1-api-openapi.yml
+- aid: turntide-technologies:turntide-technologies-complianz-v1-api
+  name: Turntide Technologies Complianz/v1 API
+  description: The complianz/v1 API from Turntide Technologies — 12 operation(s) for complianz/v1.
+  humanURL: https://turntide.com/wp-json/
+  baseURL: https://turntide.com/wp-json
+  tags:
+  - complianz/v1
+  properties:
+  - type: OpenAPI
+    url: openapi/turntide-technologies-complianz-v1-api-openapi.yml
+- aid: turntide-technologies:turntide-technologies-core-api
+  name: Turntide Technologies Core API
+  description: The core API from Turntide Technologies — 1 operation(s) for core.
+  humanURL: https://turntide.com/wp-json/
+  baseURL: https://turntide.com/wp-json
+  tags:
+  - core
+  properties:
+  - type: OpenAPI
+    url: openapi/turntide-technologies-core-api-openapi.yml
+- aid: turntide-technologies:turntide-technologies-mcp-api
+  name: Turntide Technologies MCP API
+  description: The mcp API from Turntide Technologies — 3 operation(s) for mcp.
+  humanURL: https://turntide.com/wp-json/
+  baseURL: https://turntide.com/wp-json
+  tags:
+  - mcp
+  properties:
+  - type: OpenAPI
+    url: openapi/turntide-technologies-mcp-api-openapi.yml
+- aid: turntide-technologies:turntide-technologies-oembed-1-0-api
+  name: Turntide Technologies Oembed/1.0 API
+  description: The oembed/1.0 API from Turntide Technologies — 3 operation(s) for oembed/1.0.
+  humanURL: https://turntide.com/wp-json/
+  baseURL: https://turntide.com/wp-json
+  tags:
+  - oembed/1.0
+  properties:
+  - type: OpenAPI
+    url: openapi/turntide-technologies-oembed-1-0-api-openapi.yml
+- aid: turntide-technologies:turntide-technologies-redirection-v1-api
+  name: Turntide Technologies Redirection/v1 API
+  description: The redirection/v1 API from Turntide Technologies — 32 operation(s) for redirection/v1.
+  humanURL: https://turntide.com/wp-json/
+  baseURL: https://turntide.com/wp-json
+  tags:
+  - redirection/v1
+  properties:
+  - type: OpenAPI
+    url: openapi/turntide-technologies-redirection-v1-api-openapi.yml
+- aid: turntide-technologies:turntide-technologies-themeco-api
+  name: Turntide Technologies Themeco API
+  description: The themeco API from Turntide Technologies — 3 operation(s) for themeco.
+  humanURL: https://turntide.com/wp-json/
+  baseURL: https://turntide.com/wp-json
+  tags:
+  - themeco
+  properties:
+  - type: OpenAPI
+    url: openapi/turntide-technologies-themeco-api-openapi.yml
+- aid: turntide-technologies:turntide-technologies-wp-abilities-v1-api
+  name: Turntide Technologies Wp Abilities/v1 API
+  description: The wp-abilities/v1 API from Turntide Technologies — 6 operation(s) for wp-abilities/v1.
+  humanURL: https://turntide.com/wp-json/
+  baseURL: https://turntide.com/wp-json
+  tags:
+  - wp-abilities/v1
+  properties:
+  - type: OpenAPI
+    url: openapi/turntide-technologies-wp-abilities-v1-api-openapi.yml
+- aid: turntide-technologies:turntide-technologies-wp-block-editor-v1-api
+  name: Turntide Technologies Wp Block Editor/v1 API
+  description: >-
+    The wp-block-editor/v1 API from Turntide Technologies — 4 operation(s) for wp-block-editor/v1.
+  humanURL: https://turntide.com/wp-json/
+  baseURL: https://turntide.com/wp-json
+  tags:
+  - wp-block-editor/v1
+  properties:
+  - type: OpenAPI
+    url: openapi/turntide-technologies-wp-block-editor-v1-api-openapi.yml
+- aid: turntide-technologies:turntide-technologies-wp-site-health-v1-api
+  name: Turntide Technologies Wp Site Health/v1 API
+  description: >-
+    The wp-site-health/v1 API from Turntide Technologies — 8 operation(s) for wp-site-health/v1.
+  humanURL: https://turntide.com/wp-json/
+  baseURL: https://turntide.com/wp-json
+  tags:
+  - wp-site-health/v1
+  properties:
+  - type: OpenAPI
+    url: openapi/turntide-technologies-wp-site-health-v1-api-openapi.yml
+- aid: turntide-technologies:turntide-technologies-wp-v2-api
+  name: Turntide Technologies Wp/v2 API
+  description: The wp/v2 API from Turntide Technologies — 122 operation(s) for wp/v2.
+  humanURL: https://turntide.com/wp-json/
+  baseURL: https://turntide.com/wp-json
+  tags:
+  - wp/v2
+  properties:
+  - type: OpenAPI
+    url: openapi/turntide-technologies-wp-v2-api-openapi.yml
+- aid: turntide-technologies:turntide-technologies-wpe-cache-plugin-v1-api
+  name: Turntide Technologies Wpe/cache Plugin/v1 API
+  description: >-
+    The wpe/cache-plugin/v1 API from Turntide Technologies — 3 operation(s) for wpe/cache-plugin/v1.
+  humanURL: https://turntide.com/wp-json/
+  baseURL: https://turntide.com/wp-json
+  tags:
+  - wpe/cache-plugin/v1
+  properties:
+  - type: OpenAPI
+    url: openapi/turntide-technologies-wpe-cache-plugin-v1-api-openapi.yml
+- aid: turntide-technologies:turntide-technologies-wpe-sign-on-plugin-v1-api
+  name: Turntide Technologies Wpe Sign On Plugin/v1 API
+  description: >-
+    The wpe_sign_on_plugin/v1 API from Turntide Technologies — 4 operation(s) for wpe_sign_on_plugin/v1.
+  humanURL: https://turntide.com/wp-json/
+  baseURL: https://turntide.com/wp-json
+  tags:
+  - wpe_sign_on_plugin/v1
+  properties:
+  - type: OpenAPI
+    url: openapi/turntide-technologies-wpe-sign-on-plugin-v1-api-openapi.yml
+- aid: turntide-technologies:turntide-technologies-wpforms-v1-api
+  name: Turntide Technologies Wpforms/v1 API
+  description: The wpforms/v1 API from Turntide Technologies — 8 operation(s) for wpforms/v1.
+  humanURL: https://turntide.com/wp-json/
+  baseURL: https://turntide.com/wp-json
+  tags:
+  - wpforms/v1
+  properties:
+  - type: OpenAPI
+    url: openapi/turntide-technologies-wpforms-v1-api-openapi.yml
+- aid: turntide-technologies:turntide-technologies-yoast-v1-api
+  name: Turntide Technologies Yoast/v1 API
+  description: The yoast/v1 API from Turntide Technologies — 59 operation(s) for yoast/v1.
+  humanURL: https://turntide.com/wp-json/
+  baseURL: https://turntide.com/wp-json
+  tags:
+  - yoast/v1
+  properties:
+  - type: OpenAPI
+    url: openapi/turntide-technologies-yoast-v1-api-openapi.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Overlay
+  url: overlays/turntide-technologies-wordpress-rest-overlay.yaml
 - type: Website
   url: https://turntide.com/
 - type: Documentation
