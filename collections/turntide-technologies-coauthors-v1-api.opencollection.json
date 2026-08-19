@@ -1,0 +1,162 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Turntide WordPress REST Coauthors/v1 API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "coauthors/v1",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /coauthors/v1",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/coauthors/v1",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/coauthors/v1` in the `coauthors/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /coauthors/v1/authors-by-term-ids",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/coauthors/v1/authors-by-term-ids",
+            "params": [
+              {
+                "name": "ids",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of taxonomy term IDs."
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/coauthors/v1/authors-by-term-ids` in the `coauthors/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /coauthors/v1/authors/{post_id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/coauthors/v1/authors/:post_id",
+            "params": [
+              {
+                "name": "post_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/coauthors/v1/authors/(?P<post_id>[\\d]+)` in the `coauthors/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /coauthors/v1/authors/{post_id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/coauthors/v1/authors/:post_id",
+            "params": [
+              {
+                "name": "post_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/coauthors/v1/authors/(?P<post_id>[\\d]+)` in the `coauthors/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /coauthors/v1/coauthors",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/coauthors/v1/coauthors",
+            "params": [
+              {
+                "name": "post_id",
+                "value": "",
+                "type": "query",
+                "description": "Unique identifier for a post."
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/coauthors/v1/coauthors` in the `coauthors/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /coauthors/v1/coauthors/{user_nicename}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/coauthors/v1/coauthors/:user_nicename",
+            "params": [
+              {
+                "name": "user_nicename",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/coauthors/v1/coauthors/(?P<user_nicename>[\\w-]+)` in the `coauthors/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /coauthors/v1/search",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/coauthors/v1/search",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Text to search."
+              },
+              {
+                "name": "existing_authors",
+                "value": "",
+                "type": "query",
+                "description": "Names of existing co-authors to exclude from search results."
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/coauthors/v1/search` in the `coauthors/v1` namespace."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

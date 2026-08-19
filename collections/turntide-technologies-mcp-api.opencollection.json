@@ -1,0 +1,107 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Turntide WordPress REST MCP API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "mcp",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /mcp",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/mcp",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/mcp` in the `mcp` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /mcp/mcp-adapter-default-server",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/mcp/mcp-adapter-default-server"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/mcp/mcp-adapter-default-server` in the `mcp` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /mcp/mcp-adapter-default-server",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/mcp/mcp-adapter-default-server"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/mcp/mcp-adapter-default-server` in the `mcp` namespace."
+        },
+        {
+          "info": {
+            "name": "DELETE /mcp/mcp-adapter-default-server",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://turntide.com/wp-json/mcp/mcp-adapter-default-server"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/mcp/mcp-adapter-default-server` in the `mcp` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /mcp/mcp-oauth-server",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/mcp/mcp-oauth-server"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/mcp/mcp-oauth-server` in the `mcp` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /mcp/mcp-oauth-server",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/mcp/mcp-oauth-server"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/mcp/mcp-oauth-server` in the `mcp` namespace."
+        },
+        {
+          "info": {
+            "name": "DELETE /mcp/mcp-oauth-server",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://turntide.com/wp-json/mcp/mcp-oauth-server"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/mcp/mcp-oauth-server` in the `mcp` namespace."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

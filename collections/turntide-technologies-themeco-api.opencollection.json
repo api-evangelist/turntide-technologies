@@ -1,0 +1,123 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Turntide WordPress REST Themeco API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "themeco",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /themeco",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/themeco",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/themeco` in the `themeco` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /themeco/data/{path}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/themeco/data/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/themeco/data/(?P<path>[a-zA-Z0-9-_]+)` in the `themeco` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /themeco/data/{path}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/themeco/data/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/themeco/data/(?P<path>[a-zA-Z0-9-_]+)` in the `themeco` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /themeco/data/{path}/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/themeco/data/:path/:id",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/themeco/data/(?P<path>[a-zA-Z0-9-_]+)/(?P<id>[a-zA-Z0-9-_]+)` in the `themeco` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /themeco/data/{path}/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/themeco/data/:path/:id",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/themeco/data/(?P<path>[a-zA-Z0-9-_]+)/(?P<id>[a-zA-Z0-9-_]+)` in the `themeco` namespace."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

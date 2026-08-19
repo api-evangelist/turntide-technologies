@@ -1,0 +1,1310 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Turntide WordPress REST Redirection/v1 API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "redirection/v1",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /redirection/v1",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/404",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/404",
+            "params": [
+              {
+                "name": "filterBy",
+                "value": "",
+                "type": "query",
+                "description": "Field to filter by"
+              },
+              {
+                "name": "orderby",
+                "value": "",
+                "type": "query",
+                "description": "Field to order results by"
+              },
+              {
+                "name": "direction",
+                "value": "",
+                "type": "query",
+                "description": "Direction of ordered results"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query",
+                "description": "Number of results per page"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Page offset"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/404` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/bulk/404/{bulk}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/bulk/404/:bulk",
+            "params": [
+              {
+                "name": "bulk",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/bulk/404/(?P<bulk>delete)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/bulk/404/{bulk}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/bulk/404/:bulk",
+            "params": [
+              {
+                "name": "bulk",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/bulk/404/(?P<bulk>delete)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/bulk/404/{bulk}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/bulk/404/:bulk",
+            "params": [
+              {
+                "name": "bulk",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/bulk/404/(?P<bulk>delete)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/bulk/group/{bulk}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/bulk/group/:bulk",
+            "params": [
+              {
+                "name": "bulk",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/bulk/group/(?P<bulk>delete|enable|disable)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/bulk/group/{bulk}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/bulk/group/:bulk",
+            "params": [
+              {
+                "name": "bulk",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/bulk/group/(?P<bulk>delete|enable|disable)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/bulk/group/{bulk}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/bulk/group/:bulk",
+            "params": [
+              {
+                "name": "bulk",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/bulk/group/(?P<bulk>delete|enable|disable)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/bulk/log/{bulk}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/bulk/log/:bulk",
+            "params": [
+              {
+                "name": "bulk",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/bulk/log/(?P<bulk>delete)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/bulk/log/{bulk}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/bulk/log/:bulk",
+            "params": [
+              {
+                "name": "bulk",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/bulk/log/(?P<bulk>delete)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/bulk/log/{bulk}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/bulk/log/:bulk",
+            "params": [
+              {
+                "name": "bulk",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/bulk/log/(?P<bulk>delete)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/bulk/redirect/{bulk}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/bulk/redirect/:bulk",
+            "params": [
+              {
+                "name": "bulk",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/bulk/redirect/(?P<bulk>delete|enable|disable|reset)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/bulk/redirect/{bulk}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/bulk/redirect/:bulk",
+            "params": [
+              {
+                "name": "bulk",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/bulk/redirect/(?P<bulk>delete|enable|disable|reset)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/bulk/redirect/{bulk}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/bulk/redirect/:bulk",
+            "params": [
+              {
+                "name": "bulk",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/bulk/redirect/(?P<bulk>delete|enable|disable|reset)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/export/{module}/{format}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/export/:module/:format",
+            "params": [
+              {
+                "name": "module",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/export/(?P<module>1|2|3|all)/(?P<format>csv|apache|nginx|json)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/export/404/{format}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/export/404/:format",
+            "params": [
+              {
+                "name": "format",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/export/404/(?P<format>csv|json)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/export/404/preview",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/export/404/preview"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/export/404/preview` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/export/bundle",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/export/bundle"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/export/bundle` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/export/bundle/preview",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/export/bundle/preview"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/export/bundle/preview` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/export/group/{format}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/export/group/:format",
+            "params": [
+              {
+                "name": "format",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/export/group/(?P<format>csv|json)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/export/log/{format}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/export/log/:format",
+            "params": [
+              {
+                "name": "format",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/export/log/(?P<format>csv|json)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/export/log/preview",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/export/log/preview"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/export/log/preview` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/export/redirect",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/export/redirect"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/export/redirect` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/export/redirect/preview",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/export/redirect/preview"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/export/redirect/preview` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/group",
+            "params": [
+              {
+                "name": "filterBy",
+                "value": "",
+                "type": "query",
+                "description": "Field to filter by"
+              },
+              {
+                "name": "orderby",
+                "value": "",
+                "type": "query",
+                "description": "Field to order results by"
+              },
+              {
+                "name": "direction",
+                "value": "",
+                "type": "query",
+                "description": "Direction of ordered results"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query",
+                "description": "Number of results per page"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Page offset"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/group` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/group",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/group",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/group` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/group",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/group",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/group` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/group",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/group",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/group` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/group/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/group/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/group/(?P<id>[\\d]+)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/group/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/group/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/group/(?P<id>[\\d]+)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/group/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/group/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/group/(?P<id>[\\d]+)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/import/file/{group_id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/import/file/:group_id",
+            "params": [
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/import/file/(?P<group_id>\\d+)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/import/file/{group_id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/import/file/:group_id",
+            "params": [
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/import/file/(?P<group_id>\\d+)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/import/file/{group_id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/import/file/:group_id",
+            "params": [
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/import/file/(?P<group_id>\\d+)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/import/plugin",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/import/plugin"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/import/plugin` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/import/plugin",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/import/plugin",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/import/plugin` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/import/plugin",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/import/plugin",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/import/plugin` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/import/plugin",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/import/plugin",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/import/plugin` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/import/plugin/{plugin}/preview",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/import/plugin/:plugin/preview",
+            "params": [
+              {
+                "name": "plugin",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "delete_source",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "duplicate_mode",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/import/plugin/(?P<plugin>[a-z0-9-]+)/preview` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/log",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/log",
+            "params": [
+              {
+                "name": "filterBy",
+                "value": "",
+                "type": "query",
+                "description": "Field to filter by"
+              },
+              {
+                "name": "orderby",
+                "value": "",
+                "type": "query",
+                "description": "Field to order results by"
+              },
+              {
+                "name": "direction",
+                "value": "",
+                "type": "query",
+                "description": "Direction of ordered results"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query",
+                "description": "Number of results per page"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Page offset"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/log` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/plugin",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/plugin",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/plugin",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/plugin",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/plugin/data",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/data",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/data` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/plugin/data",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/data",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/data` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/plugin/data",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/data",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/data` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/plugin/delete",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/delete"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/delete` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/plugin/delete",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/delete"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/delete` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/plugin/delete",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/delete"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/delete` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/plugin/finish",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/finish"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/finish` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/plugin/finish",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/finish"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/finish` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/plugin/finish",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/finish"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/finish` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/plugin/fix",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/fix",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/fix` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/plugin/fix",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/fix",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/fix` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/plugin/fix",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/fix",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/fix` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/plugin/test",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/test"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/test` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/plugin/test",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/test"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/test` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/plugin/test",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/test"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/test` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/plugin/test",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/test"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/test` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "DELETE /redirection/v1/plugin/test",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://turntide.com/wp-json/redirection/v1/plugin/test"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/plugin/test` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/redirect",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/redirect",
+            "params": [
+              {
+                "name": "filterBy",
+                "value": "",
+                "type": "query",
+                "description": "Field to filter by"
+              },
+              {
+                "name": "orderby",
+                "value": "",
+                "type": "query",
+                "description": "Field to order results by"
+              },
+              {
+                "name": "direction",
+                "value": "",
+                "type": "query",
+                "description": "Direction of ordered results"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query",
+                "description": "Number of results per page"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Page offset"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/redirect` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/redirect",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/redirect",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/redirect` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/redirect",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/redirect",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/redirect` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/redirect",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/redirect",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/redirect` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/redirect/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/redirect/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/redirect/(?P<id>[\\d]+)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/redirect/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/redirect/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/redirect/(?P<id>[\\d]+)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/redirect/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/redirect/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/redirect/(?P<id>[\\d]+)` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/redirect/post",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/redirect/post",
+            "params": [
+              {
+                "name": "text",
+                "value": "",
+                "type": "query",
+                "description": "Text to match"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/redirect/post` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /redirection/v1/setting",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/redirection/v1/setting"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/setting` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /redirection/v1/setting",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/redirection/v1/setting"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/setting` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PUT /redirection/v1/setting",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://turntide.com/wp-json/redirection/v1/setting"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/setting` in the `redirection/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "PATCH /redirection/v1/setting",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://turntide.com/wp-json/redirection/v1/setting"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/redirection/v1/setting` in the `redirection/v1` namespace."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -37,15 +37,20 @@ probe:
   body: '{"code":"mcp_unauthorized","message":"MCP authentication required.","data":{"status":401}}'
   fetched: '2026-08-02'
 tools: []
-tools_note: >-
-  The live tool list is auth-gated. An anonymous JSON-RPC tools/list returns HTTP 401
-  mcp_unauthorized, so no tool names or inputSchemas could be observed and none are asserted
-  here. Turntide publishes no llms.txt or MCP documentation listing the tool set, so there is
-  no published fallback list to record either. Enumerating the real tools requires an
-  authenticated OAuth introspection pass with the "mcp" scope.
-x-notes: >-
-  This MCP server is a WordPress MCP Adapter installed on the turntide.com corporate website.
-  It projects the site's registered WordPress Abilities (the wp-abilities/v1 REST namespace,
-  also present in the route index) as MCP tools. It is a content/CMS agent surface — it is not
-  an agent interface to Turntide's motor, power electronics, energy storage or thermal
-  products, for which Turntide publishes no API.
+tools_note: The live tool list is auth-gated. An anonymous JSON-RPC tools/list returns HTTP 401 mcp_unauthorized,
+  so no tool names or inputSchemas could be observed and none are asserted here. Turntide publishes no
+  llms.txt or MCP documentation listing the tool set, so there is no published fallback list to record
+  either. Enumerating the real tools requires an authenticated OAuth introspection pass with the "mcp"
+  scope.
+x-notes: This MCP server is a WordPress MCP Adapter installed on the turntide.com corporate website. It
+  projects the site's registered WordPress Abilities (the wp-abilities/v1 REST namespace, also present
+  in the route index) as MCP tools. It is a content/CMS agent surface — it is not an agent interface to
+  Turntide's motor, power electronics, energy storage or thermal products, for which Turntide publishes
+  no API.
+deployment:
+  mode: remote
+  endpoint: https://turntide.com/wp-json/mcp/mcp-oauth-server
+  verified: probed
+  probe: gated
+  checked: '2026-08-12'
+  source: catalog MCP census

@@ -1,0 +1,169 @@
+{
+  "item": [
+    {
+      "id": "0ee5633b-f751-4d06-af88-c405fc9ff992",
+      "name": "core",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e3d8e248-5036-4401-81d3-8a8fe4c8e295",
+          "name": "POST /batch/v1",
+          "request": {
+            "name": "POST /batch/v1",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/batch/v1` in the `core` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "batch",
+                "v1"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requests\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"validation\": \"normal\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3563164b-1e31-48c8-ad6a-add0101e01da",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "batch",
+                    "v1"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"requests\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"validation\": \"normal\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d0e47a30-8016-4c5a-b10f-e90cc92bcc2d",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "batch",
+                    "v1"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"requests\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"validation\": \"normal\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 1999\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://turntide.com/wp-json",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "26070487-4746-46b4-a14d-5406bbe13675",
+    "name": "Turntide WordPress REST Core API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The WordPress REST API surface published by Turntide Technologies at https://turntide.com/wp-json/. This document was DERIVED mechanically from the live route index -- every path, method and parameter below appears in that index -- and component schemas were harvested from live HTTP OPTIONS responses on the core wp/v2 collections. It covers the corporate website's content/CMS surface plus the WordPress Abilities API (wp-abilities/v1) and an MCP adapter namespace (mcp). It is NOT a product API for Turntide's motors, power electronics, energy storage or thermal hardware -- Turntide publishes no public developer API for those products.",
+      "type": "text/plain"
+    }
+  }
+}

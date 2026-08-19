@@ -1,0 +1,130 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Turntide WordPress REST Wpforms/v1 API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "wpforms/v1",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /wpforms/v1",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/wpforms/v1",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wpforms/v1` in the `wpforms/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /wpforms/v1/setup-wizard/complete",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/wpforms/v1/setup-wizard/complete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wpforms/v1/setup-wizard/complete` in the `wpforms/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /wpforms/v1/setup-wizard/hydrate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/wpforms/v1/setup-wizard/hydrate"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wpforms/v1/setup-wizard/hydrate` in the `wpforms/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /wpforms/v1/setup-wizard/install-plugins",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/wpforms/v1/setup-wizard/install-plugins",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wpforms/v1/setup-wizard/install-plugins` in the `wpforms/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "GET /wpforms/v1/setup-wizard/license/key",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://turntide.com/wp-json/wpforms/v1/setup-wizard/license/key"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wpforms/v1/setup-wizard/license/key` in the `wpforms/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /wpforms/v1/setup-wizard/license/verify",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/wpforms/v1/setup-wizard/license/verify",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wpforms/v1/setup-wizard/license/verify` in the `wpforms/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /wpforms/v1/setup-wizard/stripe/connect-url",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/wpforms/v1/setup-wizard/stripe/connect-url"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wpforms/v1/setup-wizard/stripe/connect-url` in the `wpforms/v1` namespace."
+        },
+        {
+          "info": {
+            "name": "POST /wpforms/v1/setup-wizard/update",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/wpforms/v1/setup-wizard/update"
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wpforms/v1/setup-wizard/update` in the `wpforms/v1` namespace."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

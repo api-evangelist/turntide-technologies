@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Turntide WordPress REST Core API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "core",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST /batch/v1",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://turntide.com/wp-json/batch/v1",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/batch/v1` in the `core` namespace."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

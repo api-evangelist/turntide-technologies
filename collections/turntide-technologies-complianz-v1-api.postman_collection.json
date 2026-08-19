@@ -1,0 +1,1444 @@
+{
+  "item": [
+    {
+      "id": "d9401482-1cfe-4307-bbca-2ed93685d133",
+      "name": "complianz/v1",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "35eb76d3-ffd9-4254-8550-db1605a624c9",
+          "name": "GET /complianz/v1",
+          "request": {
+            "name": "GET /complianz/v1",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/complianz/v1` in the `complianz/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "complianz",
+                "v1"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "namespace",
+                  "value": "complianz/v1"
+                },
+                {
+                  "disabled": false,
+                  "key": "context",
+                  "value": "view"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2cf2a3ab-5b53-4917-87ee-217950fbc71e",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "namespace",
+                      "value": "complianz/v1"
+                    },
+                    {
+                      "key": "context",
+                      "value": "view"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "83161247-6f65-4f9d-8717-92afd6fd9591",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "namespace",
+                      "value": "complianz/v1"
+                    },
+                    {
+                      "key": "context",
+                      "value": "view"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3146\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "af845603-1be4-4b05-8711-a05ade72d4ca",
+          "name": "GET /complianz/v1/banner",
+          "request": {
+            "name": "GET /complianz/v1/banner",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/complianz/v1/banner` in the `complianz/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "complianz",
+                "v1",
+                "banner"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "16c241e5-78c7-4500-8508-e706bc5beb97",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "banner"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d0de97b6-0067-49e8-a62f-fa64f3e4a850",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "banner"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3146\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "eb42c76b-16cb-449d-9288-36476de004a2",
+          "name": "GET /complianz/v1/consent-area/{post_id}/{block_id}",
+          "request": {
+            "name": "GET /complianz/v1/consent-area/{post_id}/{block_id}",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/complianz/v1/consent-area/(?P<post_id>([0-9]+))/(?P<block_id>([a-z0-9-_]+))` in the `complianz/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "complianz",
+                "v1",
+                "consent-area",
+                ":post_id",
+                ":block_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "post_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "block_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "91cc383d-d909-4f37-af15-c1c1d64b4631",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "consent-area",
+                    ":post_id",
+                    ":block_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "post_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "block_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e2a6bc6e-fa0a-4fbc-b01d-45bf9e27017c",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "consent-area",
+                    ":post_id",
+                    ":block_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "post_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "block_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3146\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8ccb4905-c800-4aac-96b7-c97a8abd370f",
+          "name": "GET /complianz/v1/cookie_data",
+          "request": {
+            "name": "GET /complianz/v1/cookie_data",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/complianz/v1/cookie_data` in the `complianz/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "complianz",
+                "v1",
+                "cookie_data"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fbb6f46d-e782-4768-a3a7-38e18a3e74a6",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "cookie_data"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "138c28c1-ee4d-4849-b970-5c3828570b46",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "cookie_data"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3146\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8126f2c3-00c8-4a5d-b7a3-e8842c090a97",
+          "name": "POST /complianz/v1/datarequests",
+          "request": {
+            "name": "POST /complianz/v1/datarequests",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/complianz/v1/datarequests` in the `complianz/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "complianz",
+                "v1",
+                "datarequests"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "72bd02c4-acc7-48fb-85b4-c16cf6b88515",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "datarequests"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "63f1c5b6-3d7d-4e10-ab3a-587fc69d94c3",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "datarequests"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3146\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e30c2a43-3949-476b-8882-e5c28b5085ba",
+          "name": "GET /complianz/v1/documents",
+          "request": {
+            "name": "GET /complianz/v1/documents",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/complianz/v1/documents` in the `complianz/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "complianz",
+                "v1",
+                "documents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9e593b68-a8b1-4ea6-ab58-9927b1973a27",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "documents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d679bcab-f8d1-4953-8e44-13f50005762e",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "documents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3146\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "37f61bb6-c9d8-4e09-8f70-40fcb547476c",
+          "name": "GET /complianz/v1/manage_consent_html",
+          "request": {
+            "name": "GET /complianz/v1/manage_consent_html",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/complianz/v1/manage_consent_html` in the `complianz/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "complianz",
+                "v1",
+                "manage_consent_html"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a7d2c9f9-5ecb-4e10-95b5-95d7887e762a",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "manage_consent_html"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "030bbaa2-9dcb-4e8f-a3ac-ab87f1193b17",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "manage_consent_html"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3146\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8d86eb3c-7dcd-4974-929c-3760550cd7af",
+          "name": "POST /complianz/v1/scan/post",
+          "request": {
+            "name": "POST /complianz/v1/scan/post",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/complianz/v1/scan/post` in the `complianz/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "complianz",
+                "v1",
+                "scan",
+                "post"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a5a9881f-5a7e-4fc4-abf9-2e332f07dbd4",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "scan",
+                    "post"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c1b84200-8a56-4c46-bd08-2326e09c3437",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "scan",
+                    "post"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3146\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "12399f5f-f932-41c3-a7aa-b64d90f22e81",
+          "name": "POST /complianz/v1/store_cookies",
+          "request": {
+            "name": "POST /complianz/v1/store_cookies",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/complianz/v1/store_cookies` in the `complianz/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "complianz",
+                "v1",
+                "store_cookies"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3d747764-bc7e-4d5f-a5ce-4f02dfc11450",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "store_cookies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1b38ffa0-d2b1-4e9d-b08d-cc7c87bd2505",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "store_cookies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3146\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "69cf2fc7-99d4-418e-9703-0964a5bc0cae",
+          "name": "POST /complianz/v1/track",
+          "request": {
+            "name": "POST /complianz/v1/track",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/complianz/v1/track` in the `complianz/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "complianz",
+                "v1",
+                "track"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "249ed8d2-85e6-448f-8384-7152fff3ffac",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "track"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c050ec50-9d19-4aec-8d98-b480090a9395",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "track"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3146\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8ca96980-a978-4283-8dd0-3ceaa87ddd27",
+          "name": "POST /complianz/v1/wsc-checks",
+          "request": {
+            "name": "POST /complianz/v1/wsc-checks",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/complianz/v1/wsc-checks` in the `complianz/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "complianz",
+                "v1",
+                "wsc-checks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "abc0f55b-d41f-45ba-adca-b7ee96941b79",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "wsc-checks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9e35b297-6fc4-4727-87ca-012aa9d92d8f",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "wsc-checks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3146\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2b700f80-7435-4ca5-b70d-632d959aa45d",
+          "name": "POST /complianz/v1/wsc-scan",
+          "request": {
+            "name": "POST /complianz/v1/wsc-scan",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/complianz/v1/wsc-scan` in the `complianz/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "complianz",
+                "v1",
+                "wsc-scan"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "732ae9e6-939d-41a7-a053-72cc33c44a36",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "wsc-scan"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "12e89c97-8962-4009-a11a-34f4319ea34b",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "complianz",
+                    "v1",
+                    "wsc-scan"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3146\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://turntide.com/wp-json",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "eb6f35ab-42cc-47df-8168-c297169aaa4c",
+    "name": "Turntide WordPress REST Complianz/v1 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The WordPress REST API surface published by Turntide Technologies at https://turntide.com/wp-json/. This document was DERIVED mechanically from the live route index -- every path, method and parameter below appears in that index -- and component schemas were harvested from live HTTP OPTIONS responses on the core wp/v2 collections. It covers the corporate website's content/CMS surface plus the WordPress Abilities API (wp-abilities/v1) and an MCP adapter namespace (mcp). It is NOT a product API for Turntide's motors, power electronics, energy storage or thermal hardware -- Turntide publishes no public developer API for those products.",
+      "type": "text/plain"
+    }
+  }
+}

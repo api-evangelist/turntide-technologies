@@ -1,0 +1,964 @@
+{
+  "item": [
+    {
+      "id": "c0c5bffd-ced0-4ccd-bfb7-bbc9581ab11b",
+      "name": "wp-site-health/v1",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "503de20e-2f6a-4b1d-a0d4-a6a8e9d889cf",
+          "name": "GET /wp-site-health/v1",
+          "request": {
+            "name": "GET /wp-site-health/v1",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp-site-health/v1` in the `wp-site-health/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "wp-site-health",
+                "v1"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "namespace",
+                  "value": "wp-site-health/v1"
+                },
+                {
+                  "disabled": false,
+                  "key": "context",
+                  "value": "view"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f6fac8fe-53a9-4535-9085-98b7d4ad5e94",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wp-site-health",
+                    "v1"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "namespace",
+                      "value": "wp-site-health/v1"
+                    },
+                    {
+                      "key": "context",
+                      "value": "view"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d43bd479-51ca-4123-818d-a18d948bd6ca",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wp-site-health",
+                    "v1"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "namespace",
+                      "value": "wp-site-health/v1"
+                    },
+                    {
+                      "key": "context",
+                      "value": "view"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3467\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4fe5d9f9-c2e1-48e1-838b-5bad2c614263",
+          "name": "GET /wp-site-health/v1/directory-sizes",
+          "request": {
+            "name": "GET /wp-site-health/v1/directory-sizes",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp-site-health/v1/directory-sizes` in the `wp-site-health/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "wp-site-health",
+                "v1",
+                "directory-sizes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8a2af2b3-79d9-49e8-9c04-6e9ec5fd9089",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wp-site-health",
+                    "v1",
+                    "directory-sizes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d2a94ab4-efbc-4569-b66d-9d4b3d637c6d",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wp-site-health",
+                    "v1",
+                    "directory-sizes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3467\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "279b83f2-54f9-4373-bc69-9a475097853c",
+          "name": "GET /wp-site-health/v1/tests/authorization-header",
+          "request": {
+            "name": "GET /wp-site-health/v1/tests/authorization-header",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp-site-health/v1/tests/authorization-header` in the `wp-site-health/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "wp-site-health",
+                "v1",
+                "tests",
+                "authorization-header"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "24f427e6-fb35-42e7-993a-a7833f49c6de",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wp-site-health",
+                    "v1",
+                    "tests",
+                    "authorization-header"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "dbf78e29-edd6-4fc1-9e32-93dd45dade13",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wp-site-health",
+                    "v1",
+                    "tests",
+                    "authorization-header"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3467\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "94f6a403-7243-45aa-8f3c-092b4b5afa0f",
+          "name": "GET /wp-site-health/v1/tests/background-updates",
+          "request": {
+            "name": "GET /wp-site-health/v1/tests/background-updates",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp-site-health/v1/tests/background-updates` in the `wp-site-health/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "wp-site-health",
+                "v1",
+                "tests",
+                "background-updates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dd08f533-d43e-4881-8ada-08948e317681",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wp-site-health",
+                    "v1",
+                    "tests",
+                    "background-updates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "482950b1-59bc-4253-b29d-a1668bd7dcb3",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wp-site-health",
+                    "v1",
+                    "tests",
+                    "background-updates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3467\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8ea42861-6583-4da2-afc8-7e0d22d62174",
+          "name": "GET /wp-site-health/v1/tests/dotorg-communication",
+          "request": {
+            "name": "GET /wp-site-health/v1/tests/dotorg-communication",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp-site-health/v1/tests/dotorg-communication` in the `wp-site-health/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "wp-site-health",
+                "v1",
+                "tests",
+                "dotorg-communication"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e4de4ce5-a0b0-4394-9cb6-cd019318b041",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wp-site-health",
+                    "v1",
+                    "tests",
+                    "dotorg-communication"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a8e04a5f-7871-424d-831b-6792a1b82b91",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wp-site-health",
+                    "v1",
+                    "tests",
+                    "dotorg-communication"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3467\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "47541c19-fc27-452e-bc40-f45029b42cf8",
+          "name": "GET /wp-site-health/v1/tests/https-status",
+          "request": {
+            "name": "GET /wp-site-health/v1/tests/https-status",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp-site-health/v1/tests/https-status` in the `wp-site-health/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "wp-site-health",
+                "v1",
+                "tests",
+                "https-status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8e6c889e-27c3-4194-b233-cdd0a676e279",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wp-site-health",
+                    "v1",
+                    "tests",
+                    "https-status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "acc86896-b852-4496-ba4f-f733fecf3fb4",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wp-site-health",
+                    "v1",
+                    "tests",
+                    "https-status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3467\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "63c005aa-0b10-494f-b285-780de5da898c",
+          "name": "GET /wp-site-health/v1/tests/loopback-requests",
+          "request": {
+            "name": "GET /wp-site-health/v1/tests/loopback-requests",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp-site-health/v1/tests/loopback-requests` in the `wp-site-health/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "wp-site-health",
+                "v1",
+                "tests",
+                "loopback-requests"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "29e44fc4-1066-43f9-bc83-a171a0e4bbc3",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wp-site-health",
+                    "v1",
+                    "tests",
+                    "loopback-requests"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c8c71353-a0ac-4114-8ed2-4257d929c52c",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wp-site-health",
+                    "v1",
+                    "tests",
+                    "loopback-requests"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3467\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "15b2c5b3-1b35-4654-8dad-e07c85fa5289",
+          "name": "GET /wp-site-health/v1/tests/page-cache",
+          "request": {
+            "name": "GET /wp-site-health/v1/tests/page-cache",
+            "description": {
+              "content": "Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp-site-health/v1/tests/page-cache` in the `wp-site-health/v1` namespace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "wp-site-health",
+                "v1",
+                "tests",
+                "page-cache"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "97b2f79c-aa38-473b-b922-9731367f708a",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wp-site-health",
+                    "v1",
+                    "tests",
+                    "page-cache"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5e86c028-7736-4b7a-983a-f1cfcfa77840",
+              "name": "WordPress REST error envelope (observed live on this host)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wp-site-health",
+                    "v1",
+                    "tests",
+                    "page-cache"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"data\": {\n    \"status\": 3467\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://turntide.com/wp-json",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a115642b-5bac-4d2c-a4f5-e310ad2262df",
+    "name": "Turntide WordPress REST Wp Site Health/v1 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The WordPress REST API surface published by Turntide Technologies at https://turntide.com/wp-json/. This document was DERIVED mechanically from the live route index -- every path, method and parameter below appears in that index -- and component schemas were harvested from live HTTP OPTIONS responses on the core wp/v2 collections. It covers the corporate website's content/CMS surface plus the WordPress Abilities API (wp-abilities/v1) and an MCP adapter namespace (mcp). It is NOT a product API for Turntide's motors, power electronics, energy storage or thermal hardware -- Turntide publishes no public developer API for those products.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,1879 @@
+openapi: 3.2.0
+info:
+  title: Turntide WordPress REST Yoast/v1 API
+  version: wp/v2
+  summary: The machine-readable REST surface published at turntide.com/wp-json.
+  description: The WordPress REST API surface published by Turntide Technologies at https://turntide.com/wp-json/. This document was DERIVED mechanically from the live route index -- every path, method and parameter below appears in that index -- and component schemas were harvested from live HTTP OPTIONS responses on the core wp/v2 collections. It covers the corporate website's content/CMS surface plus the WordPress Abilities API (wp-abilities/v1) and an MCP adapter namespace (mcp). It is NOT a product API for Turntide's motors, power electronics, energy storage or thermal hardware -- Turntide publishes no public developer API for those products.
+  contact:
+    url: https://turntide.com/contact-us/
+  x-derived-from: https://turntide.com/wp-json/
+  x-derived-on: '2026-08-02'
+  x-derived-by: API Evangelist enrichment pipeline (local-v1)
+servers:
+- url: https://turntide.com/wp-json
+  description: Turntide WordPress REST API
+tags:
+- name: yoast/v1
+paths:
+  /yoast/v1:
+    get:
+      operationId: getYoastV1
+      summary: GET /yoast/v1
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      parameters:
+      - name: namespace
+        in: query
+        required: false
+        schema:
+          default: yoast/v1
+      - name: context
+        in: query
+        required: false
+        schema:
+          default: view
+  /yoast/v1/action_tracking:
+    post:
+      operationId: createYoastV1ActionTracking
+      summary: POST /yoast/v1/action_tracking
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/action_tracking` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                action:
+                  type: string
+              required:
+              - action
+  /yoast/v1/ai/free_sparks:
+    post:
+      operationId: createYoastV1AiFreeSparks
+      summary: POST /yoast/v1/ai/free_sparks
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/ai/free_sparks` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/ai_content_planner/banner_permanent_dismissal:
+    post:
+      operationId: createYoastV1AiContentPlannerBannerPermanentDismissal
+      summary: POST /yoast/v1/ai_content_planner/banner_permanent_dismissal
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/ai_content_planner/banner_permanent_dismissal` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                is_dismissed: {}
+              required:
+              - is_dismissed
+  /yoast/v1/ai_content_planner/get_outline:
+    post:
+      operationId: createYoastV1AiContentPlannerGetOutline
+      summary: POST /yoast/v1/ai_content_planner/get_outline
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/ai_content_planner/get_outline` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                post_type:
+                  type: string
+                language:
+                  type: string
+                editor:
+                  type: string
+                  enum:
+                  - classic
+                  - elementor
+                  - gutenberg
+                title:
+                  type: string
+                intent:
+                  type: string
+                explanation:
+                  type: string
+                keyphrase:
+                  type: string
+                meta_description:
+                  type: string
+                category:
+                  type: object
+                recent_content:
+                  type: array
+                  items:
+                    type: object
+              required:
+              - post_type
+              - language
+              - editor
+              - title
+              - intent
+              - explanation
+              - keyphrase
+              - meta_description
+              - category
+              - recent_content
+  /yoast/v1/ai_content_planner/get_suggestions:
+    get:
+      operationId: getYoastV1AiContentPlannerGetSuggestions
+      summary: GET /yoast/v1/ai_content_planner/get_suggestions
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/ai_content_planner/get_suggestions` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      parameters:
+      - name: post_type
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The post type to get content suggestions for.
+      - name: language
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The language the content is written in.
+      - name: editor
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - classic
+          - elementor
+          - gutenberg
+        description: The current editor.
+  /yoast/v1/ai_generator/bust_subscription_cache:
+    post:
+      operationId: createYoastV1AiGeneratorBustSubscriptionCache
+      summary: POST /yoast/v1/ai_generator/bust_subscription_cache
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/ai_generator/bust_subscription_cache` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/ai_generator/callback:
+    post:
+      operationId: createYoastV1AiGeneratorCallback
+      summary: POST /yoast/v1/ai_generator/callback
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/ai_generator/callback` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                access_jwt:
+                  type: string
+                refresh_jwt:
+                  type: string
+                code_challenge:
+                  type: string
+                user_id:
+                  type: integer
+              required:
+              - access_jwt
+              - refresh_jwt
+              - code_challenge
+              - user_id
+  /yoast/v1/ai_generator/consent:
+    post:
+      operationId: createYoastV1AiGeneratorConsent
+      summary: POST /yoast/v1/ai_generator/consent
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/ai_generator/consent` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                consent:
+                  type: boolean
+              required:
+              - consent
+  /yoast/v1/ai_generator/get_suggestions:
+    post:
+      operationId: createYoastV1AiGeneratorGetSuggestions
+      summary: POST /yoast/v1/ai_generator/get_suggestions
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/ai_generator/get_suggestions` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                  enum:
+                  - seo-title
+                  - meta-description
+                  - product-seo-title
+                  - product-meta-description
+                  - product-taxonomy-seo-title
+                  - product-taxonomy-meta-description
+                  - taxonomy-seo-title
+                  - taxonomy-meta-description
+                prompt_content:
+                  type: string
+                focus_keyphrase:
+                  type: string
+                language:
+                  type: string
+                platform:
+                  type: string
+                  enum:
+                  - Google
+                  - Facebook
+                  - Twitter
+                editor:
+                  type: string
+                  enum:
+                  - classic
+                  - elementor
+                  - gutenberg
+              required:
+              - type
+              - prompt_content
+              - focus_keyphrase
+              - language
+              - platform
+              - editor
+  /yoast/v1/ai_generator/get_usage:
+    post:
+      operationId: createYoastV1AiGeneratorGetUsage
+      summary: POST /yoast/v1/ai_generator/get_usage
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/ai_generator/get_usage` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                is_woo_product_entity:
+                  type: boolean
+                  default: false
+  /yoast/v1/ai_generator/refresh_callback:
+    post:
+      operationId: createYoastV1AiGeneratorRefreshCallback
+      summary: POST /yoast/v1/ai_generator/refresh_callback
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/ai_generator/refresh_callback` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                access_jwt:
+                  type: string
+                refresh_jwt:
+                  type: string
+                code_challenge:
+                  type: string
+                user_id:
+                  type: integer
+              required:
+              - access_jwt
+              - refresh_jwt
+              - code_challenge
+              - user_id
+  /yoast/v1/alerts/dismiss:
+    post:
+      operationId: createYoastV1AlertsDismiss
+      summary: POST /yoast/v1/alerts/dismiss
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/alerts/dismiss` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                key: {}
+              required:
+              - key
+  /yoast/v1/available_posts:
+    get:
+      operationId: getYoastV1AvailablePosts
+      summary: GET /yoast/v1/available_posts
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/available_posts` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      parameters:
+      - name: search
+        in: query
+        required: false
+        schema:
+          type: string
+          default: ''
+      - name: postType
+        in: query
+        required: false
+        schema:
+          type: string
+          default: page
+  /yoast/v1/bulk_editor/posts:
+    get:
+      operationId: getYoastV1BulkEditorPosts
+      summary: GET /yoast/v1/bulk_editor/posts
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/bulk_editor/posts` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      parameters:
+      - name: content_type
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The content type to fetch posts for.
+      - name: per_page
+        in: query
+        required: false
+        schema:
+          type: integer
+          default: 20
+        description: The number of posts to fetch.
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+          default: 1
+        description: The page of posts to fetch.
+      - name: search
+        in: query
+        required: false
+        schema:
+          type: string
+          default: ''
+        description: The term to search posts by.
+      - name: status
+        in: query
+        required: false
+        schema:
+          type: array
+          default:
+          - publish
+          - draft
+          - pending
+          - future
+          items:
+            type: string
+            enum:
+            - publish
+            - draft
+            - pending
+            - future
+        description: The post statuses to include.
+  /yoast/v1/bulk_editor/update_search:
+    post:
+      operationId: createYoastV1BulkEditorUpdateSearch
+      summary: POST /yoast/v1/bulk_editor/update_search
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/bulk_editor/update_search` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items: {}
+              required:
+              - items
+  /yoast/v1/bulk_editor/update_social:
+    post:
+      operationId: createYoastV1BulkEditorUpdateSocial
+      summary: POST /yoast/v1/bulk_editor/update_social
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/bulk_editor/update_social` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items: {}
+              required:
+              - items
+  /yoast/v1/complete_task:
+    post:
+      operationId: createYoastV1CompleteTask
+      summary: POST /yoast/v1/complete_task
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/complete_task` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                options:
+                  type: object
+              required:
+              - options
+  /yoast/v1/configuration/check_capability:
+    get:
+      operationId: getYoastV1ConfigurationCheckCapability
+      summary: GET /yoast/v1/configuration/check_capability
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/configuration/check_capability` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      parameters:
+      - name: user_id
+        in: query
+        required: true
+        schema: {}
+  /yoast/v1/configuration/enable_tracking:
+    post:
+      operationId: createYoastV1ConfigurationEnableTracking
+      summary: POST /yoast/v1/configuration/enable_tracking
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/configuration/enable_tracking` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tracking:
+                  type: boolean
+              required:
+              - tracking
+  /yoast/v1/configuration/get_configuration_state:
+    get:
+      operationId: getYoastV1ConfigurationGetConfigurationState
+      summary: GET /yoast/v1/configuration/get_configuration_state
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/configuration/get_configuration_state` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/configuration/save_configuration_state:
+    post:
+      operationId: createYoastV1ConfigurationSaveConfigurationState
+      summary: POST /yoast/v1/configuration/save_configuration_state
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/configuration/save_configuration_state` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                finishedSteps:
+                  type: array
+                  items: {}
+              required:
+              - finishedSteps
+  /yoast/v1/configuration/site_representation:
+    post:
+      operationId: createYoastV1ConfigurationSiteRepresentation
+      summary: POST /yoast/v1/configuration/site_representation
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/configuration/site_representation` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                company_or_person:
+                  type: string
+                  enum:
+                  - company
+                  - person
+                company_name:
+                  type: string
+                company_logo:
+                  type: string
+                company_logo_id:
+                  type: integer
+                person_logo:
+                  type: string
+                person_logo_id:
+                  type: integer
+                company_or_person_user_id:
+                  type: integer
+                description:
+                  type: string
+              required:
+              - company_or_person
+  /yoast/v1/configuration/social_profiles:
+    post:
+      operationId: createYoastV1ConfigurationSocialProfiles
+      summary: POST /yoast/v1/configuration/social_profiles
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/configuration/social_profiles` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                facebook_site:
+                  type: string
+                twitter_site:
+                  type: string
+                other_social_urls:
+                  type: array
+                  items: {}
+  /yoast/v1/file_size:
+    get:
+      operationId: getYoastV1FileSize
+      summary: GET /yoast/v1/file_size
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/file_size` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      parameters:
+      - name: url
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The url to retrieve
+  /yoast/v1/get_head:
+    get:
+      operationId: getYoastV1GetHead
+      summary: GET /yoast/v1/get_head
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/get_head` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      parameters:
+      - name: url
+        in: query
+        required: true
+        schema: {}
+  /yoast/v1/get_tasks:
+    get:
+      operationId: getYoastV1GetTasks
+      summary: GET /yoast/v1/get_tasks
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/get_tasks` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      parameters:
+      - name: options
+        in: query
+        required: false
+        schema:
+          type: object
+  /yoast/v1/import/{plugin}/{type}:
+    parameters:
+    - name: plugin
+      in: path
+      required: true
+      schema:
+        type: string
+    - name: type
+      in: path
+      required: true
+      schema:
+        type: string
+    post:
+      operationId: createYoastV1ImportByPluginByType
+      summary: POST /yoast/v1/import/{plugin}/{type}
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/import/(?P<plugin>[\w-]+)/(?P<type>[\w-]+)` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/indexing/complete:
+    post:
+      operationId: createYoastV1IndexingComplete
+      summary: POST /yoast/v1/indexing/complete
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/indexing/complete` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/indexing/general:
+    post:
+      operationId: createYoastV1IndexingGeneral
+      summary: POST /yoast/v1/indexing/general
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/indexing/general` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/indexing/indexables-complete:
+    post:
+      operationId: createYoastV1IndexingIndexablesComplete
+      summary: POST /yoast/v1/indexing/indexables-complete
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/indexing/indexables-complete` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/indexing/post-type-archives:
+    post:
+      operationId: createYoastV1IndexingPostTypeArchives
+      summary: POST /yoast/v1/indexing/post-type-archives
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/indexing/post-type-archives` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/indexing/posts:
+    post:
+      operationId: createYoastV1IndexingPosts
+      summary: POST /yoast/v1/indexing/posts
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/indexing/posts` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/indexing/prepare:
+    post:
+      operationId: createYoastV1IndexingPrepare
+      summary: POST /yoast/v1/indexing/prepare
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/indexing/prepare` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/indexing/terms:
+    post:
+      operationId: createYoastV1IndexingTerms
+      summary: POST /yoast/v1/indexing/terms
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/indexing/terms` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/integrations/set_active:
+    post:
+      operationId: createYoastV1IntegrationsSetActive
+      summary: POST /yoast/v1/integrations/set_active
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/integrations/set_active` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                active:
+                  type: boolean
+                integration:
+                  type: string
+              required:
+              - active
+              - integration
+  /yoast/v1/introductions/{introduction_id}/seen:
+    parameters:
+    - name: introduction_id
+      in: path
+      required: true
+      schema:
+        type: string
+    post:
+      operationId: createYoastV1IntroductionsByIntroductionIdSeen
+      summary: POST /yoast/v1/introductions/{introduction_id}/seen
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/introductions/(?P<introduction_id>[\w-]+)/seen` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                is_seen:
+                  default: true
+  /yoast/v1/link-indexing/posts:
+    post:
+      operationId: createYoastV1LinkIndexingPosts
+      summary: POST /yoast/v1/link-indexing/posts
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/link-indexing/posts` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/link-indexing/terms:
+    post:
+      operationId: createYoastV1LinkIndexingTerms
+      summary: POST /yoast/v1/link-indexing/terms
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/link-indexing/terms` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/meta/search:
+    get:
+      operationId: getYoastV1MetaSearch
+      summary: GET /yoast/v1/meta/search
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/meta/search` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/new-content-type-visibility/dismiss-post-type:
+    post:
+      operationId: createYoastV1NewContentTypeVisibilityDismissPostType
+      summary: POST /yoast/v1/new-content-type-visibility/dismiss-post-type
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/new-content-type-visibility/dismiss-post-type` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                postTypeName: {}
+  /yoast/v1/new-content-type-visibility/dismiss-taxonomy:
+    post:
+      operationId: createYoastV1NewContentTypeVisibilityDismissTaxonomy
+      summary: POST /yoast/v1/new-content-type-visibility/dismiss-taxonomy
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/new-content-type-visibility/dismiss-taxonomy` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                taxonomyName: {}
+  /yoast/v1/readability_scores:
+    get:
+      operationId: getYoastV1ReadabilityScores
+      summary: GET /yoast/v1/readability_scores
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/readability_scores` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      parameters:
+      - name: contentType
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: taxonomy
+        in: query
+        required: false
+        schema:
+          type: string
+          default: ''
+      - name: term
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: troubleshooting
+        in: query
+        required: false
+        schema: {}
+  /yoast/v1/semrush/authenticate:
+    post:
+      operationId: createYoastV1SemrushAuthenticate
+      summary: POST /yoast/v1/semrush/authenticate
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/semrush/authenticate` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                code: {}
+              required:
+              - code
+  /yoast/v1/semrush/country_code:
+    post:
+      operationId: createYoastV1SemrushCountryCode
+      summary: POST /yoast/v1/semrush/country_code
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/semrush/country_code` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                country_code: {}
+              required:
+              - country_code
+  /yoast/v1/semrush/related_keyphrases:
+    get:
+      operationId: getYoastV1SemrushRelatedKeyphrases
+      summary: GET /yoast/v1/semrush/related_keyphrases
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/semrush/related_keyphrases` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      parameters:
+      - name: keyphrase
+        in: query
+        required: true
+        schema: {}
+      - name: country_code
+        in: query
+        required: true
+        schema: {}
+  /yoast/v1/seo_scores:
+    get:
+      operationId: getYoastV1SeoScores
+      summary: GET /yoast/v1/seo_scores
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/seo_scores` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      parameters:
+      - name: contentType
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: taxonomy
+        in: query
+        required: false
+        schema:
+          type: string
+          default: ''
+      - name: term
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: troubleshooting
+        in: query
+        required: false
+        schema: {}
+  /yoast/v1/setup_steps_tracking:
+    post:
+      operationId: createYoastV1SetupStepsTracking
+      summary: POST /yoast/v1/setup_steps_tracking
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/setup_steps_tracking` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                setup_widget_loaded:
+                  type: string
+                  enum:
+                  - 'yes'
+                  - 'no'
+                first_interaction_stage:
+                  type: string
+                  enum:
+                  - install
+                  - activate
+                  - setup
+                  - grantConsent
+                  - successfullyConnected
+                last_interaction_stage:
+                  type: string
+                  enum:
+                  - install
+                  - activate
+                  - setup
+                  - grantConsent
+                  - successfullyConnected
+                setup_widget_temporarily_dismissed:
+                  type: string
+                  enum:
+                  - 'yes'
+                  - 'no'
+                setup_widget_permanently_dismissed:
+                  type: string
+                  enum:
+                  - 'yes'
+                  - 'no'
+  /yoast/v1/site_kit_configuration_permanent_dismissal:
+    post:
+      operationId: createYoastV1SiteKitConfigurationPermanentDismissal
+      summary: POST /yoast/v1/site_kit_configuration_permanent_dismissal
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/site_kit_configuration_permanent_dismissal` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                is_dismissed: {}
+              required:
+              - is_dismissed
+  /yoast/v1/statistics:
+    get:
+      operationId: getYoastV1Statistics
+      summary: GET /yoast/v1/statistics
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/statistics` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/wincher/account/limit:
+    get:
+      operationId: getYoastV1WincherAccountLimit
+      summary: GET /yoast/v1/wincher/account/limit
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/wincher/account/limit` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/wincher/account/upgrade-campaign:
+    get:
+      operationId: getYoastV1WincherAccountUpgradeCampaign
+      summary: GET /yoast/v1/wincher/account/upgrade-campaign
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/wincher/account/upgrade-campaign` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/wincher/authenticate:
+    post:
+      operationId: createYoastV1WincherAuthenticate
+      summary: POST /yoast/v1/wincher/authenticate
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/wincher/authenticate` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                code: {}
+                websiteId: {}
+              required:
+              - code
+              - websiteId
+  /yoast/v1/wincher/authorization-url:
+    get:
+      operationId: getYoastV1WincherAuthorizationUrl
+      summary: GET /yoast/v1/wincher/authorization-url
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/wincher/authorization-url` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/wincher/keyphrases:
+    post:
+      operationId: createYoastV1WincherKeyphrases
+      summary: POST /yoast/v1/wincher/keyphrases
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/wincher/keyphrases` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyphrases: {}
+                permalink: {}
+                startAt: {}
+  /yoast/v1/wincher/keyphrases/track:
+    post:
+      operationId: createYoastV1WincherKeyphrasesTrack
+      summary: POST /yoast/v1/wincher/keyphrases/track
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/wincher/keyphrases/track` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyphrases: {}
+              required:
+              - keyphrases
+  /yoast/v1/wincher/keyphrases/untrack:
+    delete:
+      operationId: deleteYoastV1WincherKeyphrasesUntrack
+      summary: DELETE /yoast/v1/wincher/keyphrases/untrack
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/wincher/keyphrases/untrack` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /yoast/v1/wistia_embed_permission:
+    get:
+      operationId: getYoastV1WistiaEmbedPermission
+      summary: GET /yoast/v1/wistia_embed_permission
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/wistia_embed_permission` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+    post:
+      operationId: createYoastV1WistiaEmbedPermission
+      summary: POST /yoast/v1/wistia_embed_permission
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/wistia_embed_permission` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                value:
+                  default: true
+  /yoast/v1/workouts:
+    get:
+      operationId: getYoastV1Workouts
+      summary: GET /yoast/v1/workouts
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/workouts` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+    post:
+      operationId: createYoastV1Workouts
+      summary: POST /yoast/v1/workouts
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/yoast/v1/workouts` in the `yoast/v1` namespace.
+      tags:
+      - yoast/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+components:
+  schemas:
+    RestError:
+      type: object
+      description: WordPress REST API error envelope, observed live on this host (e.g. rest_forbidden 401, rest_no_route 404).
+      properties:
+        code:
+          type: string
+          examples:
+          - rest_forbidden
+          - rest_no_route
+        message:
+          type: string
+        data:
+          type: object
+          properties:
+            status:
+              type: integer
+  securitySchemes:
+    applicationPassword:
+      type: http
+      scheme: basic
+      description: WordPress Application Passwords, advertised by the route index at https://turntide.com/wp-json/ under authentication.application-passwords; authorization endpoint https://turntide.com/wp-admin/authorize-application.php
+    mcpOAuth2:
+      type: oauth2
+      description: OAuth 2.1 authorization server advertised at https://turntide.com/.well-known/oauth-authorization-server (PKCE S256, scope 'mcp'); protects the MCP endpoint declared at https://turntide.com/.well-known/oauth-protected-resource
+      flows:
+        authorizationCode:
+          authorizationUrl: https://turntide.com/oauth/authorize
+          tokenUrl: https://turntide.com/oauth/token
+          refreshUrl: https://turntide.com/oauth/token
+          scopes:
+            mcp: Access the Turntide MCP server

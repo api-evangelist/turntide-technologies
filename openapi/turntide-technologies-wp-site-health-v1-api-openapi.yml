@@ -1,0 +1,221 @@
+openapi: 3.2.0
+info:
+  title: Turntide WordPress REST Wp Site Health/v1 API
+  version: wp/v2
+  summary: The machine-readable REST surface published at turntide.com/wp-json.
+  description: The WordPress REST API surface published by Turntide Technologies at https://turntide.com/wp-json/. This document was DERIVED mechanically from the live route index -- every path, method and parameter below appears in that index -- and component schemas were harvested from live HTTP OPTIONS responses on the core wp/v2 collections. It covers the corporate website's content/CMS surface plus the WordPress Abilities API (wp-abilities/v1) and an MCP adapter namespace (mcp). It is NOT a product API for Turntide's motors, power electronics, energy storage or thermal hardware -- Turntide publishes no public developer API for those products.
+  contact:
+    url: https://turntide.com/contact-us/
+  x-derived-from: https://turntide.com/wp-json/
+  x-derived-on: '2026-08-02'
+  x-derived-by: API Evangelist enrichment pipeline (local-v1)
+servers:
+- url: https://turntide.com/wp-json
+  description: Turntide WordPress REST API
+tags:
+- name: wp-site-health/v1
+paths:
+  /wp-site-health/v1:
+    get:
+      operationId: getWpSiteHealthV1
+      summary: GET /wp-site-health/v1
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp-site-health/v1` in the `wp-site-health/v1` namespace.
+      tags:
+      - wp-site-health/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+      parameters:
+      - name: namespace
+        in: query
+        required: false
+        schema:
+          default: wp-site-health/v1
+      - name: context
+        in: query
+        required: false
+        schema:
+          default: view
+  /wp-site-health/v1/directory-sizes:
+    get:
+      operationId: getWpSiteHealthV1DirectorySizes
+      summary: GET /wp-site-health/v1/directory-sizes
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp-site-health/v1/directory-sizes` in the `wp-site-health/v1` namespace.
+      tags:
+      - wp-site-health/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /wp-site-health/v1/tests/authorization-header:
+    get:
+      operationId: getWpSiteHealthV1TestsAuthorizationHeader
+      summary: GET /wp-site-health/v1/tests/authorization-header
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp-site-health/v1/tests/authorization-header` in the `wp-site-health/v1` namespace.
+      tags:
+      - wp-site-health/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /wp-site-health/v1/tests/background-updates:
+    get:
+      operationId: getWpSiteHealthV1TestsBackgroundUpdates
+      summary: GET /wp-site-health/v1/tests/background-updates
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp-site-health/v1/tests/background-updates` in the `wp-site-health/v1` namespace.
+      tags:
+      - wp-site-health/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /wp-site-health/v1/tests/dotorg-communication:
+    get:
+      operationId: getWpSiteHealthV1TestsDotorgCommunication
+      summary: GET /wp-site-health/v1/tests/dotorg-communication
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp-site-health/v1/tests/dotorg-communication` in the `wp-site-health/v1` namespace.
+      tags:
+      - wp-site-health/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /wp-site-health/v1/tests/https-status:
+    get:
+      operationId: getWpSiteHealthV1TestsHttpsStatus
+      summary: GET /wp-site-health/v1/tests/https-status
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp-site-health/v1/tests/https-status` in the `wp-site-health/v1` namespace.
+      tags:
+      - wp-site-health/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /wp-site-health/v1/tests/loopback-requests:
+    get:
+      operationId: getWpSiteHealthV1TestsLoopbackRequests
+      summary: GET /wp-site-health/v1/tests/loopback-requests
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp-site-health/v1/tests/loopback-requests` in the `wp-site-health/v1` namespace.
+      tags:
+      - wp-site-health/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+  /wp-site-health/v1/tests/page-cache:
+    get:
+      operationId: getWpSiteHealthV1TestsPageCache
+      summary: GET /wp-site-health/v1/tests/page-cache
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp-site-health/v1/tests/page-cache` in the `wp-site-health/v1` namespace.
+      tags:
+      - wp-site-health/v1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: WordPress REST error envelope (observed live on this host)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestError'
+components:
+  schemas:
+    RestError:
+      type: object
+      description: WordPress REST API error envelope, observed live on this host (e.g. rest_forbidden 401, rest_no_route 404).
+      properties:
+        code:
+          type: string
+          examples:
+          - rest_forbidden
+          - rest_no_route
+        message:
+          type: string
+        data:
+          type: object
+          properties:
+            status:
+              type: integer
+  securitySchemes:
+    applicationPassword:
+      type: http
+      scheme: basic
+      description: WordPress Application Passwords, advertised by the route index at https://turntide.com/wp-json/ under authentication.application-passwords; authorization endpoint https://turntide.com/wp-admin/authorize-application.php
+    mcpOAuth2:
+      type: oauth2
+      description: OAuth 2.1 authorization server advertised at https://turntide.com/.well-known/oauth-authorization-server (PKCE S256, scope 'mcp'); protects the MCP endpoint declared at https://turntide.com/.well-known/oauth-protected-resource
+      flows:
+        authorizationCode:
+          authorizationUrl: https://turntide.com/oauth/authorize
+          tokenUrl: https://turntide.com/oauth/token
+          refreshUrl: https://turntide.com/oauth/token
+          scopes:
+            mcp: Access the Turntide MCP server
