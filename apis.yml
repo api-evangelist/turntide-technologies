@@ -58,6 +58,8 @@ apis:
   humanURL: https://turntide.com/wp-json/
   baseURL: https://turntide.com/wp-json
   tags:
+  - Core
+  tags_raw:
   - core
   properties:
   - type: OpenAPI
@@ -68,6 +70,8 @@ apis:
   humanURL: https://turntide.com/wp-json/
   baseURL: https://turntide.com/wp-json
   tags:
+  - MCP
+  tags_raw:
   - mcp
   properties:
   - type: OpenAPI
