@@ -11,6 +11,18 @@ description: 'Turntide Technologies is an electrification company that designs a
   its own hosts are the WordPress REST API at turntide.com/wp-json, the WordPress Abilities API, and
   an OAuth-protected MCP server advertised via RFC 8414 / RFC 9728 well-known metadata.'
 url: https://raw.githubusercontent.com/api-evangelist/turntide-technologies/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://turntide.com/wp-content/uploads/2024/03/Logo-color.svg
 x-type: company
 x-source: harvest:secondary-market
