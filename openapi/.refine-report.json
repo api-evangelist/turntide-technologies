@@ -1,21 +1,7 @@
 {
   "provider": "turntide-technologies",
   "sources": [
-    "turntide-technologies-coauthors-v1-api-openapi.yml",
-    "turntide-technologies-complianz-v1-api-openapi.yml",
-    "turntide-technologies-core-api-openapi.yml",
-    "turntide-technologies-mcp-api-openapi.yml",
-    "turntide-technologies-oembed-1-0-api-openapi.yml",
-    "turntide-technologies-redirection-v1-api-openapi.yml",
-    "turntide-technologies-themeco-api-openapi.yml",
-    "turntide-technologies-wp-abilities-v1-api-openapi.yml",
-    "turntide-technologies-wp-block-editor-v1-api-openapi.yml",
-    "turntide-technologies-wp-site-health-v1-api-openapi.yml",
-    "turntide-technologies-wp-v2-api-openapi.yml",
-    "turntide-technologies-wpe-cache-plugin-v1-api-openapi.yml",
-    "turntide-technologies-wpe-sign-on-plugin-v1-api-openapi.yml",
-    "turntide-technologies-wpforms-v1-api-openapi.yml",
-    "turntide-technologies-yoast-v1-api-openapi.yml"
+    "_ae-authored/turntide-technologies-wordpress-rest-openapi.yml"
   ],
   "outputs": [
     "turntide-technologies-coauthors-v1-api-openapi.yml",
@@ -38,7 +24,25 @@
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "turntide-technologies-wordpress-rest-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "turntide-technologies-coauthors-v1-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "turntide-technologies-complianz-v1-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "turntide-technologies-core-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "turntide-technologies-mcp-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "turntide-technologies-oembed-1-0-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "turntide-technologies-redirection-v1-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "turntide-technologies-themeco-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "turntide-technologies-wp-abilities-v1-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "turntide-technologies-wp-block-editor-v1-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "turntide-technologies-wp-site-health-v1-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "turntide-technologies-wp-v2-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "turntide-technologies-wpe-cache-plugin-v1-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "turntide-technologies-wpe-sign-on-plugin-v1-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "turntide-technologies-wpforms-v1-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "turntide-technologies-yoast-v1-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

@@ -1,65 +1,79 @@
-generated: '2026-08-02'
+generated: '2026-09-19'
 method: searched
 source: live probes of every host in apis.yml and every OpenAPI servers[] host
 hosts_probed:
 - turntide.com
 - app.turntide.com
-documents:
-- host: turntide.com
-  path: /.well-known/oauth-authorization-server
-  spec: RFC 8414 OAuth 2.0 Authorization Server Metadata
-  status: 200
-  note: served after a 301 to the trailing-slash form; issuer https://turntide.com, PKCE
-    S256 required, single scope "mcp", token_endpoint_auth_methods_supported ["none"]
-    (public clients), client_id_metadata_document_supported true
-  file: turntide-technologies-oauth-authorization-server.json
-- host: turntide.com
-  path: /.well-known/oauth-protected-resource
-  spec: RFC 9728 OAuth 2.0 Protected Resource Metadata
-  status: 200
-  note: declares the protected resource as https://turntide.com/wp-json/mcp/mcp-oauth-server
-    (the WordPress MCP adapter endpoint), bearer token in the Authorization header
-  file: turntide-technologies-oauth-protected-resource.json
-- host: turntide.com
-  path: /.well-known/security.txt
-  spec: RFC 9116
-  status: 404
-- host: turntide.com
-  path: /.well-known/openid-configuration
-  status: 404
-- host: turntide.com
-  path: /.well-known/api-catalog
-  spec: RFC 9727
-  status: 404
-- host: turntide.com
-  path: /.well-known/ai-plugin.json
-  status: 404
-- host: turntide.com
-  path: /.well-known/agent-card.json
-  spec: A2A 1.0.0
-  status: 404
-- host: turntide.com
-  path: /.well-known/agent.json
-  spec: A2A pre-0.3 legacy
-  status: 404
-- host: app.turntide.com
-  path: /.well-known/security.txt
-  status: 404
-- host: app.turntide.com
-  path: /.well-known/openid-configuration
-  status: 404
-- host: app.turntide.com
-  path: /.well-known/oauth-authorization-server
-  status: 404
-- host: app.turntide.com
-  path: /.well-known/agent-card.json
-  status: 404
-- host: app.turntide.com
-  path: /.well-known/agent.json
-  status: 404
 x-evidence:
   fetched: '2026-08-02'
-  notes: >-
-    app.turntide.com returns a single-page-app shell for most paths but answers 404 for
-    /.well-known/* , so no false-positive agent-card was recorded. No A2A agent card was
-    found on any Turntide host; per the enrichment contract no a2a/ artifact was authored.
+  notes: app.turntide.com returns a single-page-app shell for most paths but answers 404 for /.well-known/*
+    , so no false-positive agent-card was recorded. No A2A agent card was found on any Turntide host;
+    per the enrichment contract no a2a/ artifact was authored.
+hosts:
+- host: ''
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: turntide-technologies-oauth-authorization-server.json
+    note: served after a 301 to the trailing-slash form; issuer https://turntide.com, PKCE S256 required,
+      single scope "mcp", token_endpoint_auth_methods_supported ["none"] (public clients), client_id_metadata_document_supported
+      true
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: turntide-technologies-oauth-protected-resource.json
+    note: declares the protected resource as https://turntide.com/wp-json/mcp/mcp-oauth-server (the WordPress
+      MCP adapter endpoint), bearer token in the Authorization header
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://turntide.com
+  documents:
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: turntide-technologies-turntide-oauth-protected-resource.json
+    bytes: 185
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: turntide-technologies-turntide-oauth-authorization-server.json
+    bytes: 539
+  path_echo_control: passed
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
+x-mcp-probe:
+  probed: '2026-09-19'
+  issue: roadmap#321, roadmap#337
+  documents:
+  - host: https://turntide.com
+    path: /.well-known/oauth-protected-resource
+    file: turntide-technologies-turntide-oauth-protected-resource.json
+  - host: https://turntide.com
+    path: /.well-known/oauth-authorization-server
+    file: turntide-technologies-turntide-oauth-authorization-server.json
+  validated_on: resource (RFC 9728) / issuer (RFC 8414, OIDC)
+  negative_control: one per host; a 2xx JSON object at an impossible path discards the host
+note: 'MCP-host OAuth discovery added 2026-09-19 (roadmap#321/#337): the harvest visits a provider''s
+  primary hosts, and RFC 9728 protected-resource metadata lives on the MCP host, so these documents existed
+  and were invisible to the scorer. Fetched live and validated on `resource`/`issuer`; one negative control
+  per host.'

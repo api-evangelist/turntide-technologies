@@ -3,7 +3,7 @@ info:
   title: Turntide WordPress REST Wp/v2 API
   version: wp/v2
   summary: The machine-readable REST surface published at turntide.com/wp-json.
-  description: The WordPress REST API surface published by Turntide Technologies at https://turntide.com/wp-json/. This document was DERIVED mechanically from the live route index -- every path, method and parameter below appears in that index -- and component schemas were harvested from live HTTP OPTIONS responses on the core wp/v2 collections. It covers the corporate website's content/CMS surface plus the WordPress Abilities API (wp-abilities/v1) and an MCP adapter namespace (mcp). It is NOT a product API for Turntide's motors, power electronics, energy storage or thermal hardware -- Turntide publishes no public developer API for those products.
+  description: The WordPress REST API surface published by Turntide Technologies at https://turntide.com/wp-json/.
   contact:
     url: https://turntide.com/contact-us/
   x-derived-from: https://turntide.com/wp-json/
@@ -146,7 +146,7 @@ paths:
     get:
       operationId: getWpV2BlockRendererByName
       summary: GET /wp/v2/block-renderer/{name}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/block-renderer/(?P<name>[a-z0-9-]+/[a-z0-9-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/block-renderer/(?P[a-z0-9-]+/[a-z0-9-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -188,7 +188,7 @@ paths:
     post:
       operationId: createWpV2BlockRendererByName
       summary: POST /wp/v2/block-renderer/{name}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/block-renderer/(?P<name>[a-z0-9-]+/[a-z0-9-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/block-renderer/(?P[a-z0-9-]+/[a-z0-9-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -269,7 +269,7 @@ paths:
     get:
       operationId: getWpV2BlockTypesByNamespace
       summary: GET /wp/v2/block-types/{namespace}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/block-types/(?P<namespace>[a-zA-Z0-9_-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/block-types/(?P[a-zA-Z0-9_-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -312,7 +312,7 @@ paths:
     get:
       operationId: getWpV2BlockTypesByNamespaceByName
       summary: GET /wp/v2/block-types/{namespace}/{name}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/block-types/(?P<namespace>[a-zA-Z0-9_-]+)/(?P<name>[a-zA-Z0-9_-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/block-types/(?P[a-zA-Z0-9_-]+)/(?P[a-zA-Z0-9_-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -616,7 +616,7 @@ paths:
     get:
       operationId: getWpV2BlocksById
       summary: GET /wp/v2/blocks/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -659,7 +659,7 @@ paths:
     post:
       operationId: createWpV2BlocksById
       summary: POST /wp/v2/blocks/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -718,7 +718,7 @@ paths:
     put:
       operationId: updateWpV2BlocksById
       summary: PUT /wp/v2/blocks/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -777,7 +777,7 @@ paths:
     patch:
       operationId: updateWpV2BlocksById2
       summary: PATCH /wp/v2/blocks/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -836,7 +836,7 @@ paths:
     delete:
       operationId: deleteWpV2BlocksById
       summary: DELETE /wp/v2/blocks/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -870,7 +870,7 @@ paths:
     get:
       operationId: getWpV2BlocksByIdAutosaves
       summary: GET /wp/v2/blocks/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P<id>[\d]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P[\d]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -907,7 +907,7 @@ paths:
     post:
       operationId: createWpV2BlocksByIdAutosaves
       summary: POST /wp/v2/blocks/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P<id>[\d]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P[\d]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -980,7 +980,7 @@ paths:
     get:
       operationId: getWpV2BlocksByParentAutosavesById
       summary: GET /wp/v2/blocks/{parent}/autosaves/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P<parent>[\d]+)/autosaves/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P[\d]+)/autosaves/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -1018,7 +1018,7 @@ paths:
     get:
       operationId: getWpV2BlocksByParentRevisions
       summary: GET /wp/v2/blocks/{parent}/revisions
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P<parent>[\d]+)/revisions` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P[\d]+)/revisions` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -1129,7 +1129,7 @@ paths:
     get:
       operationId: getWpV2BlocksByParentRevisionsById
       summary: GET /wp/v2/blocks/{parent}/revisions/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P<parent>[\d]+)/revisions/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P[\d]+)/revisions/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -1160,7 +1160,7 @@ paths:
     delete:
       operationId: deleteWpV2BlocksByParentRevisionsById
       summary: DELETE /wp/v2/blocks/{parent}/revisions/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P<parent>[\d]+)/revisions/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/blocks/(?P[\d]+)/revisions/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -1355,7 +1355,7 @@ paths:
     get:
       operationId: getWpV2CategoriesById
       summary: GET /wp/v2/categories/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/categories/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/categories/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -1386,7 +1386,7 @@ paths:
     post:
       operationId: createWpV2CategoriesById
       summary: POST /wp/v2/categories/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/categories/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/categories/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -1422,7 +1422,7 @@ paths:
     put:
       operationId: updateWpV2CategoriesById
       summary: PUT /wp/v2/categories/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/categories/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/categories/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -1458,7 +1458,7 @@ paths:
     patch:
       operationId: updateWpV2CategoriesById2
       summary: PATCH /wp/v2/categories/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/categories/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/categories/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -1494,7 +1494,7 @@ paths:
     delete:
       operationId: deleteWpV2CategoriesById
       summary: DELETE /wp/v2/categories/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/categories/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/categories/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -1687,7 +1687,7 @@ paths:
     get:
       operationId: getWpV2CoauthorsById
       summary: GET /wp/v2/coauthors/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/coauthors/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/coauthors/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -1718,7 +1718,7 @@ paths:
     post:
       operationId: createWpV2CoauthorsById
       summary: POST /wp/v2/coauthors/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/coauthors/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/coauthors/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -1752,7 +1752,7 @@ paths:
     put:
       operationId: updateWpV2CoauthorsById
       summary: PUT /wp/v2/coauthors/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/coauthors/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/coauthors/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -1786,7 +1786,7 @@ paths:
     patch:
       operationId: updateWpV2CoauthorsById2
       summary: PATCH /wp/v2/coauthors/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/coauthors/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/coauthors/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -1820,7 +1820,7 @@ paths:
     delete:
       operationId: deleteWpV2CoauthorsById
       summary: DELETE /wp/v2/coauthors/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/coauthors/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/coauthors/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -2098,7 +2098,7 @@ paths:
     get:
       operationId: getWpV2CommentsById
       summary: GET /wp/v2/comments/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/comments/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/comments/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -2135,7 +2135,7 @@ paths:
     post:
       operationId: createWpV2CommentsById
       summary: POST /wp/v2/comments/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/comments/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/comments/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -2192,7 +2192,7 @@ paths:
     put:
       operationId: updateWpV2CommentsById
       summary: PUT /wp/v2/comments/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/comments/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/comments/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -2249,7 +2249,7 @@ paths:
     patch:
       operationId: updateWpV2CommentsById2
       summary: PATCH /wp/v2/comments/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/comments/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/comments/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -2306,7 +2306,7 @@ paths:
     delete:
       operationId: deleteWpV2CommentsById
       summary: DELETE /wp/v2/comments/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/comments/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/comments/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -2827,7 +2827,7 @@ paths:
     get:
       operationId: getWpV2CommunityCategoryById
       summary: GET /wp/v2/community-category/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-category/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-category/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -2858,7 +2858,7 @@ paths:
     post:
       operationId: createWpV2CommunityCategoryById
       summary: POST /wp/v2/community-category/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-category/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-category/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -2894,7 +2894,7 @@ paths:
     put:
       operationId: updateWpV2CommunityCategoryById
       summary: PUT /wp/v2/community-category/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-category/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-category/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -2930,7 +2930,7 @@ paths:
     patch:
       operationId: updateWpV2CommunityCategoryById2
       summary: PATCH /wp/v2/community-category/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-category/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-category/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -2966,7 +2966,7 @@ paths:
     delete:
       operationId: deleteWpV2CommunityCategoryById
       summary: DELETE /wp/v2/community-category/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-category/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-category/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -3161,7 +3161,7 @@ paths:
     get:
       operationId: getWpV2CommunityTagById
       summary: GET /wp/v2/community-tag/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-tag/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-tag/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -3192,7 +3192,7 @@ paths:
     post:
       operationId: createWpV2CommunityTagById
       summary: POST /wp/v2/community-tag/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-tag/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-tag/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -3228,7 +3228,7 @@ paths:
     put:
       operationId: updateWpV2CommunityTagById
       summary: PUT /wp/v2/community-tag/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-tag/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-tag/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -3264,7 +3264,7 @@ paths:
     patch:
       operationId: updateWpV2CommunityTagById2
       summary: PATCH /wp/v2/community-tag/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-tag/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-tag/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -3300,7 +3300,7 @@ paths:
     delete:
       operationId: deleteWpV2CommunityTagById
       summary: DELETE /wp/v2/community-tag/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-tag/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community-tag/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -3334,7 +3334,7 @@ paths:
     get:
       operationId: getWpV2CommunityById
       summary: GET /wp/v2/community/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -3377,7 +3377,7 @@ paths:
     post:
       operationId: createWpV2CommunityById
       summary: POST /wp/v2/community/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -3448,7 +3448,7 @@ paths:
     put:
       operationId: updateWpV2CommunityById
       summary: PUT /wp/v2/community/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -3519,7 +3519,7 @@ paths:
     patch:
       operationId: updateWpV2CommunityById2
       summary: PATCH /wp/v2/community/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -3590,7 +3590,7 @@ paths:
     delete:
       operationId: deleteWpV2CommunityById
       summary: DELETE /wp/v2/community/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -3624,7 +3624,7 @@ paths:
     get:
       operationId: getWpV2CommunityByIdAutosaves
       summary: GET /wp/v2/community/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community/(?P<id>[\d]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community/(?P[\d]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -3661,7 +3661,7 @@ paths:
     post:
       operationId: createWpV2CommunityByIdAutosaves
       summary: POST /wp/v2/community/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community/(?P<id>[\d]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community/(?P[\d]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -3746,7 +3746,7 @@ paths:
     get:
       operationId: getWpV2CommunityByParentAutosavesById
       summary: GET /wp/v2/community/{parent}/autosaves/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community/(?P<parent>[\d]+)/autosaves/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/community/(?P[\d]+)/autosaves/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -3943,7 +3943,7 @@ paths:
     get:
       operationId: getWpV2EventCategoryById
       summary: GET /wp/v2/event-category/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/event-category/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/event-category/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -3974,7 +3974,7 @@ paths:
     post:
       operationId: createWpV2EventCategoryById
       summary: POST /wp/v2/event-category/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/event-category/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/event-category/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -4008,7 +4008,7 @@ paths:
     put:
       operationId: updateWpV2EventCategoryById
       summary: PUT /wp/v2/event-category/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/event-category/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/event-category/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -4042,7 +4042,7 @@ paths:
     patch:
       operationId: updateWpV2EventCategoryById2
       summary: PATCH /wp/v2/event-category/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/event-category/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/event-category/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -4076,7 +4076,7 @@ paths:
     delete:
       operationId: deleteWpV2EventCategoryById
       summary: DELETE /wp/v2/event-category/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/event-category/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/event-category/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -4414,7 +4414,7 @@ paths:
     get:
       operationId: getWpV2EventsById
       summary: GET /wp/v2/events/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/events/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/events/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -4457,7 +4457,7 @@ paths:
     post:
       operationId: createWpV2EventsById
       summary: POST /wp/v2/events/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/events/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/events/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -4524,7 +4524,7 @@ paths:
     put:
       operationId: updateWpV2EventsById
       summary: PUT /wp/v2/events/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/events/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/events/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -4591,7 +4591,7 @@ paths:
     patch:
       operationId: updateWpV2EventsById2
       summary: PATCH /wp/v2/events/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/events/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/events/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -4658,7 +4658,7 @@ paths:
     delete:
       operationId: deleteWpV2EventsById
       summary: DELETE /wp/v2/events/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/events/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/events/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -4692,7 +4692,7 @@ paths:
     get:
       operationId: getWpV2EventsByIdAutosaves
       summary: GET /wp/v2/events/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/events/(?P<id>[\d]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/events/(?P[\d]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -4729,7 +4729,7 @@ paths:
     post:
       operationId: createWpV2EventsByIdAutosaves
       summary: POST /wp/v2/events/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/events/(?P<id>[\d]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/events/(?P[\d]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -4810,7 +4810,7 @@ paths:
     get:
       operationId: getWpV2EventsByParentAutosavesById
       summary: GET /wp/v2/events/{parent}/autosaves/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/events/(?P<parent>[\d]+)/autosaves/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/events/(?P[\d]+)/autosaves/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -4894,7 +4894,7 @@ paths:
     get:
       operationId: getWpV2FontCollectionsBySlug
       summary: GET /wp/v2/font-collections/{slug}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-collections/(?P<slug>[\/\w-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-collections/(?P[\/\w-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5071,7 +5071,7 @@ paths:
     get:
       operationId: getWpV2FontFamiliesByFontFamilyIdFontFaces
       summary: GET /wp/v2/font-families/{font_family_id}/font-faces
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P<font_family_id>[\d]+)/font-faces` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P[\d]+)/font-faces` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5168,7 +5168,7 @@ paths:
     post:
       operationId: createWpV2FontFamiliesByFontFamilyIdFontFaces
       summary: POST /wp/v2/font-families/{font_family_id}/font-faces
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P<font_family_id>[\d]+)/font-faces` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P[\d]+)/font-faces` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5213,7 +5213,7 @@ paths:
     get:
       operationId: getWpV2FontFamiliesByFontFamilyIdFontFacesById
       summary: GET /wp/v2/font-families/{font_family_id}/font-faces/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P<font_family_id>[\d]+)/font-faces/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P[\d]+)/font-faces/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5244,7 +5244,7 @@ paths:
     delete:
       operationId: deleteWpV2FontFamiliesByFontFamilyIdFontFacesById
       summary: DELETE /wp/v2/font-families/{font_family_id}/font-faces/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P<font_family_id>[\d]+)/font-faces/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P[\d]+)/font-faces/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5278,7 +5278,7 @@ paths:
     get:
       operationId: getWpV2FontFamiliesById
       summary: GET /wp/v2/font-families/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5309,7 +5309,7 @@ paths:
     post:
       operationId: createWpV2FontFamiliesById
       summary: POST /wp/v2/font-families/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5342,7 +5342,7 @@ paths:
     put:
       operationId: updateWpV2FontFamiliesById
       summary: PUT /wp/v2/font-families/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5375,7 +5375,7 @@ paths:
     patch:
       operationId: updateWpV2FontFamiliesById2
       summary: PATCH /wp/v2/font-families/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5408,7 +5408,7 @@ paths:
     delete:
       operationId: deleteWpV2FontFamiliesById
       summary: DELETE /wp/v2/font-families/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/font-families/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5442,7 +5442,7 @@ paths:
     get:
       operationId: getWpV2GlobalStylesById
       summary: GET /wp/v2/global-styles/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/global-styles/(?P<id>[\/\d+]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/global-styles/(?P[\/\d+]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5461,7 +5461,7 @@ paths:
     post:
       operationId: createWpV2GlobalStylesById
       summary: POST /wp/v2/global-styles/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/global-styles/(?P<id>[\/\d+]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/global-styles/(?P[\/\d+]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5493,7 +5493,7 @@ paths:
     put:
       operationId: updateWpV2GlobalStylesById
       summary: PUT /wp/v2/global-styles/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/global-styles/(?P<id>[\/\d+]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/global-styles/(?P[\/\d+]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5525,7 +5525,7 @@ paths:
     patch:
       operationId: updateWpV2GlobalStylesById2
       summary: PATCH /wp/v2/global-styles/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/global-styles/(?P<id>[\/\d+]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/global-styles/(?P[\/\d+]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5564,7 +5564,7 @@ paths:
     get:
       operationId: getWpV2GlobalStylesByParentRevisions
       summary: GET /wp/v2/global-styles/{parent}/revisions
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/global-styles/(?P<parent>[\d]+)/revisions` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/global-styles/(?P[\d]+)/revisions` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5626,7 +5626,7 @@ paths:
     get:
       operationId: getWpV2GlobalStylesByParentRevisionsById
       summary: GET /wp/v2/global-styles/{parent}/revisions/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/global-styles/(?P<parent>[\d]+)/revisions/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/global-styles/(?P[\d]+)/revisions/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5664,7 +5664,7 @@ paths:
     get:
       operationId: getWpV2GlobalStylesThemesByStylesheetVariations
       summary: GET /wp/v2/global-styles/themes/{stylesheet}/variations
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/global-styles/themes/(?P<stylesheet>[\/\s%\w\.\(\)\[\]\@_\-]+)/variations` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/global-styles/themes/(?P[\/\s%\w\.\(\)\[\]\@_\-]+)/variations` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5690,7 +5690,7 @@ paths:
     get:
       operationId: getWpV2GlobalStylesThemesByStylesheet
       summary: GET /wp/v2/global-styles/themes/{stylesheet}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/global-styles/themes/(?P<stylesheet>[^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/global-styles/themes/(?P[^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5951,7 +5951,7 @@ paths:
     get:
       operationId: getWpV2GuestAuthorById
       summary: GET /wp/v2/guest-author/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/guest-author/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/guest-author/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -5988,7 +5988,7 @@ paths:
     post:
       operationId: createWpV2GuestAuthorById
       summary: POST /wp/v2/guest-author/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/guest-author/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/guest-author/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -6037,7 +6037,7 @@ paths:
     put:
       operationId: updateWpV2GuestAuthorById
       summary: PUT /wp/v2/guest-author/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/guest-author/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/guest-author/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -6086,7 +6086,7 @@ paths:
     patch:
       operationId: updateWpV2GuestAuthorById2
       summary: PATCH /wp/v2/guest-author/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/guest-author/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/guest-author/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -6135,7 +6135,7 @@ paths:
     delete:
       operationId: deleteWpV2GuestAuthorById
       summary: DELETE /wp/v2/guest-author/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/guest-author/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/guest-author/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -6473,7 +6473,7 @@ paths:
     get:
       operationId: getWpV2MediaById
       summary: GET /wp/v2/media/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/media/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/media/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -6504,7 +6504,7 @@ paths:
     post:
       operationId: createWpV2MediaById
       summary: POST /wp/v2/media/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/media/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/media/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -6575,7 +6575,7 @@ paths:
     put:
       operationId: updateWpV2MediaById
       summary: PUT /wp/v2/media/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/media/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/media/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -6646,7 +6646,7 @@ paths:
     patch:
       operationId: updateWpV2MediaById2
       summary: PATCH /wp/v2/media/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/media/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/media/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -6717,7 +6717,7 @@ paths:
     delete:
       operationId: deleteWpV2MediaById
       summary: DELETE /wp/v2/media/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/media/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/media/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -6751,7 +6751,7 @@ paths:
     post:
       operationId: createWpV2MediaByIdEdit
       summary: POST /wp/v2/media/{id}/edit
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/media/(?P<id>[\d]+)/edit` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/media/(?P[\d]+)/edit` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -6813,7 +6813,7 @@ paths:
     post:
       operationId: createWpV2MediaByIdPostProcess
       summary: POST /wp/v2/media/{id}/post-process
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/media/(?P<id>[\d]+)/post-process` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/media/(?P[\d]+)/post-process` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -7147,7 +7147,7 @@ paths:
     get:
       operationId: getWpV2MenuItemsById
       summary: GET /wp/v2/menu-items/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-items/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-items/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -7178,7 +7178,7 @@ paths:
     post:
       operationId: createWpV2MenuItemsById
       summary: POST /wp/v2/menu-items/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-items/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-items/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -7254,7 +7254,7 @@ paths:
     put:
       operationId: updateWpV2MenuItemsById
       summary: PUT /wp/v2/menu-items/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-items/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-items/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -7330,7 +7330,7 @@ paths:
     patch:
       operationId: updateWpV2MenuItemsById2
       summary: PATCH /wp/v2/menu-items/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-items/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-items/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -7406,7 +7406,7 @@ paths:
     delete:
       operationId: deleteWpV2MenuItemsById
       summary: DELETE /wp/v2/menu-items/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-items/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-items/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -7440,7 +7440,7 @@ paths:
     get:
       operationId: getWpV2MenuItemsByIdAutosaves
       summary: GET /wp/v2/menu-items/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-items/(?P<id>[\d]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-items/(?P[\d]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -7477,7 +7477,7 @@ paths:
     post:
       operationId: createWpV2MenuItemsByIdAutosaves
       summary: POST /wp/v2/menu-items/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-items/(?P<id>[\d]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-items/(?P[\d]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -7565,7 +7565,7 @@ paths:
     get:
       operationId: getWpV2MenuItemsByParentAutosavesById
       summary: GET /wp/v2/menu-items/{parent}/autosaves/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-items/(?P<parent>[\d]+)/autosaves/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-items/(?P[\d]+)/autosaves/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -7635,7 +7635,7 @@ paths:
     get:
       operationId: getWpV2MenuLocationsByLocation
       summary: GET /wp/v2/menu-locations/{location}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-locations/(?P<location>[\w-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menu-locations/(?P[\w-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -7838,7 +7838,7 @@ paths:
     get:
       operationId: getWpV2MenusById
       summary: GET /wp/v2/menus/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menus/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menus/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -7869,7 +7869,7 @@ paths:
     post:
       operationId: createWpV2MenusById
       summary: POST /wp/v2/menus/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menus/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menus/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -7909,7 +7909,7 @@ paths:
     put:
       operationId: updateWpV2MenusById
       summary: PUT /wp/v2/menus/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menus/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menus/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -7949,7 +7949,7 @@ paths:
     patch:
       operationId: updateWpV2MenusById2
       summary: PATCH /wp/v2/menus/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menus/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menus/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -7989,7 +7989,7 @@ paths:
     delete:
       operationId: deleteWpV2MenusById
       summary: DELETE /wp/v2/menus/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menus/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/menus/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -8260,7 +8260,7 @@ paths:
     get:
       operationId: getWpV2NavigationById
       summary: GET /wp/v2/navigation/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -8297,7 +8297,7 @@ paths:
     post:
       operationId: createWpV2NavigationById
       summary: POST /wp/v2/navigation/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -8348,7 +8348,7 @@ paths:
     put:
       operationId: updateWpV2NavigationById
       summary: PUT /wp/v2/navigation/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -8399,7 +8399,7 @@ paths:
     patch:
       operationId: updateWpV2NavigationById2
       summary: PATCH /wp/v2/navigation/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -8450,7 +8450,7 @@ paths:
     delete:
       operationId: deleteWpV2NavigationById
       summary: DELETE /wp/v2/navigation/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -8484,7 +8484,7 @@ paths:
     get:
       operationId: getWpV2NavigationByIdAutosaves
       summary: GET /wp/v2/navigation/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P<id>[\d]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P[\d]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -8521,7 +8521,7 @@ paths:
     post:
       operationId: createWpV2NavigationByIdAutosaves
       summary: POST /wp/v2/navigation/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P<id>[\d]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P[\d]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -8586,7 +8586,7 @@ paths:
     get:
       operationId: getWpV2NavigationByParentAutosavesById
       summary: GET /wp/v2/navigation/{parent}/autosaves/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P<parent>[\d]+)/autosaves/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P[\d]+)/autosaves/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -8624,7 +8624,7 @@ paths:
     get:
       operationId: getWpV2NavigationByParentRevisions
       summary: GET /wp/v2/navigation/{parent}/revisions
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P<parent>[\d]+)/revisions` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P[\d]+)/revisions` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -8735,7 +8735,7 @@ paths:
     get:
       operationId: getWpV2NavigationByParentRevisionsById
       summary: GET /wp/v2/navigation/{parent}/revisions/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P<parent>[\d]+)/revisions/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P[\d]+)/revisions/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -8766,7 +8766,7 @@ paths:
     delete:
       operationId: deleteWpV2NavigationByParentRevisionsById
       summary: DELETE /wp/v2/navigation/{parent}/revisions/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P<parent>[\d]+)/revisions/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/navigation/(?P[\d]+)/revisions/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -9127,7 +9127,7 @@ paths:
     get:
       operationId: getWpV2PagesById
       summary: GET /wp/v2/pages/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -9170,7 +9170,7 @@ paths:
     post:
       operationId: createWpV2PagesById
       summary: POST /wp/v2/pages/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -9247,7 +9247,7 @@ paths:
     put:
       operationId: updateWpV2PagesById
       summary: PUT /wp/v2/pages/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -9324,7 +9324,7 @@ paths:
     patch:
       operationId: updateWpV2PagesById2
       summary: PATCH /wp/v2/pages/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -9401,7 +9401,7 @@ paths:
     delete:
       operationId: deleteWpV2PagesById
       summary: DELETE /wp/v2/pages/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -9435,7 +9435,7 @@ paths:
     get:
       operationId: getWpV2PagesByIdAutosaves
       summary: GET /wp/v2/pages/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P<id>[\d]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P[\d]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -9472,7 +9472,7 @@ paths:
     post:
       operationId: createWpV2PagesByIdAutosaves
       summary: POST /wp/v2/pages/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P<id>[\d]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P[\d]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -9561,7 +9561,7 @@ paths:
     get:
       operationId: getWpV2PagesByParentAutosavesById
       summary: GET /wp/v2/pages/{parent}/autosaves/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P<parent>[\d]+)/autosaves/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P[\d]+)/autosaves/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -9599,7 +9599,7 @@ paths:
     get:
       operationId: getWpV2PagesByParentRevisions
       summary: GET /wp/v2/pages/{parent}/revisions
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P<parent>[\d]+)/revisions` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P[\d]+)/revisions` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -9710,7 +9710,7 @@ paths:
     get:
       operationId: getWpV2PagesByParentRevisionsById
       summary: GET /wp/v2/pages/{parent}/revisions/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P<parent>[\d]+)/revisions/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P[\d]+)/revisions/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -9741,7 +9741,7 @@ paths:
     delete:
       operationId: deleteWpV2PagesByParentRevisionsById
       summary: DELETE /wp/v2/pages/{parent}/revisions/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P<parent>[\d]+)/revisions/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/pages/(?P[\d]+)/revisions/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -9966,7 +9966,7 @@ paths:
     get:
       operationId: getWpV2PluginsByPlugin
       summary: GET /wp/v2/plugins/{plugin}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/plugins/(?P<plugin>[^.\/]+(?:\/[^.\/]+)?)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/plugins/(?P[^.\/]+(?:\/[^.\/]+)?)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -9997,7 +9997,7 @@ paths:
     post:
       operationId: createWpV2PluginsByPlugin
       summary: POST /wp/v2/plugins/{plugin}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/plugins/(?P<plugin>[^.\/]+(?:\/[^.\/]+)?)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/plugins/(?P[^.\/]+(?:\/[^.\/]+)?)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -10035,7 +10035,7 @@ paths:
     put:
       operationId: updateWpV2PluginsByPlugin
       summary: PUT /wp/v2/plugins/{plugin}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/plugins/(?P<plugin>[^.\/]+(?:\/[^.\/]+)?)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/plugins/(?P[^.\/]+(?:\/[^.\/]+)?)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -10073,7 +10073,7 @@ paths:
     patch:
       operationId: updateWpV2PluginsByPlugin2
       summary: PATCH /wp/v2/plugins/{plugin}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/plugins/(?P<plugin>[^.\/]+(?:\/[^.\/]+)?)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/plugins/(?P[^.\/]+(?:\/[^.\/]+)?)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -10111,7 +10111,7 @@ paths:
     delete:
       operationId: deleteWpV2PluginsByPlugin
       summary: DELETE /wp/v2/plugins/{plugin}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/plugins/(?P<plugin>[^.\/]+(?:\/[^.\/]+)?)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/plugins/(?P[^.\/]+(?:\/[^.\/]+)?)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -10526,7 +10526,7 @@ paths:
     get:
       operationId: getWpV2PostsById
       summary: GET /wp/v2/posts/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -10569,7 +10569,7 @@ paths:
     post:
       operationId: createWpV2PostsById
       summary: POST /wp/v2/posts/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -10665,7 +10665,7 @@ paths:
     put:
       operationId: updateWpV2PostsById
       summary: PUT /wp/v2/posts/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -10761,7 +10761,7 @@ paths:
     patch:
       operationId: updateWpV2PostsById2
       summary: PATCH /wp/v2/posts/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -10857,7 +10857,7 @@ paths:
     delete:
       operationId: deleteWpV2PostsById
       summary: DELETE /wp/v2/posts/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -10891,7 +10891,7 @@ paths:
     get:
       operationId: getWpV2PostsByIdAutosaves
       summary: GET /wp/v2/posts/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P<id>[\d]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P[\d]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -10928,7 +10928,7 @@ paths:
     post:
       operationId: createWpV2PostsByIdAutosaves
       summary: POST /wp/v2/posts/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P<id>[\d]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P[\d]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -11038,7 +11038,7 @@ paths:
     get:
       operationId: getWpV2PostsByParentAutosavesById
       summary: GET /wp/v2/posts/{parent}/autosaves/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P<parent>[\d]+)/autosaves/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P[\d]+)/autosaves/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -11076,7 +11076,7 @@ paths:
     get:
       operationId: getWpV2PostsByParentRevisions
       summary: GET /wp/v2/posts/{parent}/revisions
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P<parent>[\d]+)/revisions` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P[\d]+)/revisions` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -11187,7 +11187,7 @@ paths:
     get:
       operationId: getWpV2PostsByParentRevisionsById
       summary: GET /wp/v2/posts/{parent}/revisions/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P<parent>[\d]+)/revisions/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P[\d]+)/revisions/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -11218,7 +11218,7 @@ paths:
     delete:
       operationId: deleteWpV2PostsByParentRevisionsById
       summary: DELETE /wp/v2/posts/{parent}/revisions/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P<parent>[\d]+)/revisions/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/posts/(?P[\d]+)/revisions/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -11626,7 +11626,7 @@ paths:
     get:
       operationId: getWpV2SidebarsById
       summary: GET /wp/v2/sidebars/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/sidebars/(?P<id>[\w-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/sidebars/(?P[\w-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -11657,7 +11657,7 @@ paths:
     post:
       operationId: createWpV2SidebarsById
       summary: POST /wp/v2/sidebars/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/sidebars/(?P<id>[\w-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/sidebars/(?P[\w-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -11687,7 +11687,7 @@ paths:
     put:
       operationId: updateWpV2SidebarsById
       summary: PUT /wp/v2/sidebars/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/sidebars/(?P<id>[\w-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/sidebars/(?P[\w-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -11717,7 +11717,7 @@ paths:
     patch:
       operationId: updateWpV2SidebarsById2
       summary: PATCH /wp/v2/sidebars/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/sidebars/(?P<id>[\w-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/sidebars/(?P[\w-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -11786,7 +11786,7 @@ paths:
     get:
       operationId: getWpV2StatusesByStatus
       summary: GET /wp/v2/statuses/{status}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/statuses/(?P<status>[\w-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/statuses/(?P[\w-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -11983,7 +11983,7 @@ paths:
     get:
       operationId: getWpV2TagsById
       summary: GET /wp/v2/tags/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/tags/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/tags/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -12014,7 +12014,7 @@ paths:
     post:
       operationId: createWpV2TagsById
       summary: POST /wp/v2/tags/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/tags/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/tags/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -12048,7 +12048,7 @@ paths:
     put:
       operationId: updateWpV2TagsById
       summary: PUT /wp/v2/tags/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/tags/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/tags/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -12082,7 +12082,7 @@ paths:
     patch:
       operationId: updateWpV2TagsById2
       summary: PATCH /wp/v2/tags/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/tags/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/tags/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -12116,7 +12116,7 @@ paths:
     delete:
       operationId: deleteWpV2TagsById
       summary: DELETE /wp/v2/tags/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/tags/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/tags/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -12188,7 +12188,7 @@ paths:
     get:
       operationId: getWpV2TaxonomiesByTaxonomy
       summary: GET /wp/v2/taxonomies/{taxonomy}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/taxonomies/(?P<taxonomy>[\w-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/taxonomies/(?P[\w-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -12333,7 +12333,7 @@ paths:
     get:
       operationId: getWpV2TemplatePartsById
       summary: GET /wp/v2/template-parts/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P<id>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -12364,7 +12364,7 @@ paths:
     post:
       operationId: createWpV2TemplatePartsById
       summary: POST /wp/v2/template-parts/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P<id>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -12415,7 +12415,7 @@ paths:
     put:
       operationId: updateWpV2TemplatePartsById
       summary: PUT /wp/v2/template-parts/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P<id>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -12466,7 +12466,7 @@ paths:
     patch:
       operationId: updateWpV2TemplatePartsById2
       summary: PATCH /wp/v2/template-parts/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P<id>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -12517,7 +12517,7 @@ paths:
     delete:
       operationId: deleteWpV2TemplatePartsById
       summary: DELETE /wp/v2/template-parts/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P<id>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -12551,7 +12551,7 @@ paths:
     get:
       operationId: getWpV2TemplatePartsByIdAutosaves
       summary: GET /wp/v2/template-parts/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P<id>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -12582,7 +12582,7 @@ paths:
     post:
       operationId: createWpV2TemplatePartsByIdAutosaves
       summary: POST /wp/v2/template-parts/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P<id>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -12645,7 +12645,7 @@ paths:
     get:
       operationId: getWpV2TemplatePartsByParentAutosavesById
       summary: GET /wp/v2/template-parts/{parent}/autosaves/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P<parent>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/autosaves/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/autosaves/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -12683,7 +12683,7 @@ paths:
     get:
       operationId: getWpV2TemplatePartsByParentRevisions
       summary: GET /wp/v2/template-parts/{parent}/revisions
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P<parent>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/revisions` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/revisions` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -12794,7 +12794,7 @@ paths:
     get:
       operationId: getWpV2TemplatePartsByParentRevisionsById
       summary: GET /wp/v2/template-parts/{parent}/revisions/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P<parent>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/revisions/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/revisions/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -12825,7 +12825,7 @@ paths:
     delete:
       operationId: deleteWpV2TemplatePartsByParentRevisionsById
       summary: DELETE /wp/v2/template-parts/{parent}/revisions/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P<parent>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/revisions/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/template-parts/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/revisions/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -13003,7 +13003,7 @@ paths:
     get:
       operationId: getWpV2TemplatesById
       summary: GET /wp/v2/templates/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P<id>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -13034,7 +13034,7 @@ paths:
     post:
       operationId: createWpV2TemplatesById
       summary: POST /wp/v2/templates/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P<id>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -13083,7 +13083,7 @@ paths:
     put:
       operationId: updateWpV2TemplatesById
       summary: PUT /wp/v2/templates/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P<id>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -13132,7 +13132,7 @@ paths:
     patch:
       operationId: updateWpV2TemplatesById2
       summary: PATCH /wp/v2/templates/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P<id>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -13181,7 +13181,7 @@ paths:
     delete:
       operationId: deleteWpV2TemplatesById
       summary: DELETE /wp/v2/templates/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P<id>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -13215,7 +13215,7 @@ paths:
     get:
       operationId: getWpV2TemplatesByIdAutosaves
       summary: GET /wp/v2/templates/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P<id>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -13246,7 +13246,7 @@ paths:
     post:
       operationId: createWpV2TemplatesByIdAutosaves
       summary: POST /wp/v2/templates/{id}/autosaves
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P<id>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/autosaves` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/autosaves` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -13307,7 +13307,7 @@ paths:
     get:
       operationId: getWpV2TemplatesByParentAutosavesById
       summary: GET /wp/v2/templates/{parent}/autosaves/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P<parent>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/autosaves/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/autosaves/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -13345,7 +13345,7 @@ paths:
     get:
       operationId: getWpV2TemplatesByParentRevisions
       summary: GET /wp/v2/templates/{parent}/revisions
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P<parent>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/revisions` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/revisions` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -13456,7 +13456,7 @@ paths:
     get:
       operationId: getWpV2TemplatesByParentRevisionsById
       summary: GET /wp/v2/templates/{parent}/revisions/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P<parent>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/revisions/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/revisions/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -13487,7 +13487,7 @@ paths:
     delete:
       operationId: deleteWpV2TemplatesByParentRevisionsById
       summary: DELETE /wp/v2/templates/{parent}/revisions/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P<parent>([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/revisions/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/templates/(?P([^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)[\/\w%-]+)/revisions/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -13592,7 +13592,7 @@ paths:
     get:
       operationId: getWpV2ThemesByStylesheet
       summary: GET /wp/v2/themes/{stylesheet}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/themes/(?P<stylesheet>[^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/themes/(?P[^\/:<>\*\?"\|]+(?:\/[^\/:<>\*\?"\|]+)?)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -13650,7 +13650,7 @@ paths:
     get:
       operationId: getWpV2TypesByType
       summary: GET /wp/v2/types/{type}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/types/(?P<type>[\w-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/types/(?P[\w-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -13906,7 +13906,7 @@ paths:
     get:
       operationId: getWpV2UsersById
       summary: GET /wp/v2/users/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -13937,7 +13937,7 @@ paths:
     post:
       operationId: createWpV2UsersById
       summary: POST /wp/v2/users/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -13996,7 +13996,7 @@ paths:
     put:
       operationId: updateWpV2UsersById
       summary: PUT /wp/v2/users/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14055,7 +14055,7 @@ paths:
     patch:
       operationId: updateWpV2UsersById2
       summary: PATCH /wp/v2/users/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14114,7 +14114,7 @@ paths:
     delete:
       operationId: deleteWpV2UsersById
       summary: DELETE /wp/v2/users/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14154,7 +14154,7 @@ paths:
     get:
       operationId: getWpV2UsersByUserIdApplicationPasswords
       summary: GET /wp/v2/users/{user_id}/application-passwords
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P<user_id>(?:[\d]+|me))/application-passwords` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P(?:[\d]+|me))/application-passwords` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14185,7 +14185,7 @@ paths:
     post:
       operationId: createWpV2UsersByUserIdApplicationPasswords
       summary: POST /wp/v2/users/{user_id}/application-passwords
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P<user_id>(?:[\d]+|me))/application-passwords` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P(?:[\d]+|me))/application-passwords` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14217,7 +14217,7 @@ paths:
     delete:
       operationId: deleteWpV2UsersByUserIdApplicationPasswords
       summary: DELETE /wp/v2/users/{user_id}/application-passwords
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P<user_id>(?:[\d]+|me))/application-passwords` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P(?:[\d]+|me))/application-passwords` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14248,7 +14248,7 @@ paths:
     get:
       operationId: getWpV2UsersByUserIdApplicationPasswordsByUuid
       summary: GET /wp/v2/users/{user_id}/application-passwords/{uuid}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P<user_id>(?:[\d]+|me))/application-passwords/(?P<uuid>[\w\-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P(?:[\d]+|me))/application-passwords/(?P[\w\-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14279,7 +14279,7 @@ paths:
     post:
       operationId: createWpV2UsersByUserIdApplicationPasswordsByUuid
       summary: POST /wp/v2/users/{user_id}/application-passwords/{uuid}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P<user_id>(?:[\d]+|me))/application-passwords/(?P<uuid>[\w\-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P(?:[\d]+|me))/application-passwords/(?P[\w\-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14309,7 +14309,7 @@ paths:
     put:
       operationId: updateWpV2UsersByUserIdApplicationPasswordsByUuid
       summary: PUT /wp/v2/users/{user_id}/application-passwords/{uuid}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P<user_id>(?:[\d]+|me))/application-passwords/(?P<uuid>[\w\-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P(?:[\d]+|me))/application-passwords/(?P[\w\-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14339,7 +14339,7 @@ paths:
     patch:
       operationId: updateWpV2UsersByUserIdApplicationPasswordsByUuid2
       summary: PATCH /wp/v2/users/{user_id}/application-passwords/{uuid}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P<user_id>(?:[\d]+|me))/application-passwords/(?P<uuid>[\w\-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P(?:[\d]+|me))/application-passwords/(?P[\w\-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14369,7 +14369,7 @@ paths:
     delete:
       operationId: deleteWpV2UsersByUserIdApplicationPasswordsByUuid
       summary: DELETE /wp/v2/users/{user_id}/application-passwords/{uuid}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P<user_id>(?:[\d]+|me))/application-passwords/(?P<uuid>[\w\-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P(?:[\d]+|me))/application-passwords/(?P[\w\-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14395,7 +14395,7 @@ paths:
     get:
       operationId: getWpV2UsersByUserIdApplicationPasswordsIntrospect
       summary: GET /wp/v2/users/{user_id}/application-passwords/introspect
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P<user_id>(?:[\d]+|me))/application-passwords/introspect` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/users/(?P(?:[\d]+|me))/application-passwords/introspect` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14707,7 +14707,7 @@ paths:
     get:
       operationId: getWpV2WidgetTypesById
       summary: GET /wp/v2/widget-types/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/widget-types/(?P<id>[a-zA-Z0-9_-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/widget-types/(?P[a-zA-Z0-9_-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14745,7 +14745,7 @@ paths:
     post:
       operationId: createWpV2WidgetTypesByIdEncode
       summary: POST /wp/v2/widget-types/{id}/encode
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/widget-types/(?P<id>[a-zA-Z0-9_-]+)/encode` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/widget-types/(?P[a-zA-Z0-9_-]+)/encode` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14782,7 +14782,7 @@ paths:
     post:
       operationId: createWpV2WidgetTypesByIdRender
       summary: POST /wp/v2/widget-types/{id}/render
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/widget-types/(?P<id>[a-zA-Z0-9_-]+)/render` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/widget-types/(?P[a-zA-Z0-9_-]+)/render` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14894,7 +14894,7 @@ paths:
     get:
       operationId: getWpV2WidgetsById
       summary: GET /wp/v2/widgets/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/widgets/(?P<id>[\w\-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/widgets/(?P[\w\-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14925,7 +14925,7 @@ paths:
     post:
       operationId: createWpV2WidgetsById
       summary: POST /wp/v2/widgets/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/widgets/(?P<id>[\w\-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/widgets/(?P[\w\-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14959,7 +14959,7 @@ paths:
     put:
       operationId: updateWpV2WidgetsById
       summary: PUT /wp/v2/widgets/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/widgets/(?P<id>[\w\-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/widgets/(?P[\w\-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -14993,7 +14993,7 @@ paths:
     patch:
       operationId: updateWpV2WidgetsById2
       summary: PATCH /wp/v2/widgets/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/widgets/(?P<id>[\w\-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/widgets/(?P[\w\-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -15027,7 +15027,7 @@ paths:
     delete:
       operationId: deleteWpV2WidgetsById
       summary: DELETE /wp/v2/widgets/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/widgets/(?P<id>[\w\-]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/widgets/(?P[\w\-]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -15219,7 +15219,7 @@ paths:
     get:
       operationId: getWpV2WpPatternCategoryById
       summary: GET /wp/v2/wp_pattern_category/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/wp_pattern_category/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/wp_pattern_category/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -15250,7 +15250,7 @@ paths:
     post:
       operationId: createWpV2WpPatternCategoryById
       summary: POST /wp/v2/wp_pattern_category/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/wp_pattern_category/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/wp_pattern_category/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -15284,7 +15284,7 @@ paths:
     put:
       operationId: updateWpV2WpPatternCategoryById
       summary: PUT /wp/v2/wp_pattern_category/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/wp_pattern_category/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/wp_pattern_category/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -15318,7 +15318,7 @@ paths:
     patch:
       operationId: updateWpV2WpPatternCategoryById2
       summary: PATCH /wp/v2/wp_pattern_category/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/wp_pattern_category/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/wp_pattern_category/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
@@ -15352,7 +15352,7 @@ paths:
     delete:
       operationId: deleteWpV2WpPatternCategoryById
       summary: DELETE /wp/v2/wp_pattern_category/{id}
-      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/wp_pattern_category/(?P<id>[\d]+)` in the `wp/v2` namespace.
+      description: Operation advertised by the WordPress REST route index at https://turntide.com/wp-json/ for route `/wp/v2/wp_pattern_category/(?P[\d]+)` in the `wp/v2` namespace.
       tags:
       - wp/v2
       responses:
